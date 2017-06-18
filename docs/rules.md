@@ -22,26 +22,32 @@ The project leader starts immediately with 5 Stones.
 # Round
 Each round is a sequence of these steps:
 1. The request stack is restocked
-2. For each different player stone on each request, remove one time unit from the time pot.
-   I.e. multiple stones from the same player still costs only one unit.
-3. For each player stone on each request, remove one time unit from the request effort stack.
-4. reset each player stone back to each player.
-   For each resetted stone, remove one time unit from the time pot.
-5. For each active request, remove as many time units 
-   from the time pot as described on the request.
-6. For each request that has an empty effort stack, add the request reward to the time pot,
+1. For each active request, add as many time units 
+   to the effort stack as described on the request (aging cost).
+1. For each different player stone on each request, remove one time unit from the time pot.
+   Multiple stones from the same player still cost only one unit. (Communication effort)
+1. For each player stone on each request, remove one time unit from the request effort stack. (Multitasking effort)
+1. reset each player stone back to each player.
+   For each resetted stone, remove one time unit from the time pot (i.e. paying off work time).
+1. For each request that has an empty effort stack, add the request reward to the time pot,
    and remove the request from the game.
-7. Let the players perform their moves. Once all moves are done, a new round starts.
+1. Let the players perform their moves. Once all moves are done, a new round starts.
 
 # Moves
 
 ## Hire
 The project leader may add any number of team members. 
+Each team member costs 10 time units of initial training.
 Each team member gets his 5 player stones.
 
 ## Accept request
 The project leader may draw one of the five request stack slots.
-Allows to assign work to a task, but unfinished requests will add additional costs
+All cards from the stack are layed out, and as many time units are stacked on each effort field
+as visible on the card
+
+## Reject request
+The project leader may reject one or more of the accepted cards, 
+but has to pay cancellation costs immediately
 
 ## Assign work
 Allows to finish one or more tasks, but spreading work will add additional costs

@@ -12,6 +12,11 @@ Additional resources like money, action points make the game more complicated,
 probably without adding any value to key game mechanics. 
 Also, time is much more intuitive than abstract values.
 
+## Why hurry?
+In reality, you cannot wait forever to fulfill a request. Either your customer gets unsatisfied,
+or the request loses significance. Working for a very long time on a single request with little to no effort
+will probably not pay off. Finishing fast is a value of its own.
+
 # Feedback Cycles
 Each action should have immediate or longterm consequences. Balancing those is part of the game.
 

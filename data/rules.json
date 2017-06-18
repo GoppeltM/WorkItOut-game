@@ -1,0 +1,7 @@
+{
+  "stonesPerMember": 5,
+  "workPerStone": 1,
+  "communicationCost": 1,
+  "multiTaskingCost": 1
+
+}
