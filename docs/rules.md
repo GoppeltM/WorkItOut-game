@@ -24,9 +24,8 @@ Each round is a sequence of these steps:
 1. The request stack is restocked
 1. For each active request, add as many time units 
    to the effort stack as described on the request (aging cost).
-1. For each different player stone on each request, remove one time unit from the time pot.
-   Multiple stones from the same player still cost only one unit. (Communication effort)
-1. For each player stone on each request, remove one time unit from the request effort stack. (Multitasking effort)
+1. For each different player stone on each request, add one time unit to the effort stack.
+   Multiple stones from the same player still cost only one unit. (Communication / Multitasking effort)
 1. reset each player stone back to each player.
    For each resetted stone, remove one time unit from the time pot (i.e. paying off work time).
 1. For each request that has an empty effort stack, add the request reward to the time pot,
