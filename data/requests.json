@@ -1,7 +1,26 @@
 [
   {
-    "gain": 20,
-    "effort": 10,
+    "title": "No Win, no Gain",
+    "gain": 60,
+    "effort": 50,
+    "agingCost": 0
+  },
+  {
+    "title": "Work quick",
+    "gain": 80,
+    "effort": 20,
+    "agingCost": 5
+  },
+  {
+    "title": "longterm",
+    "gain": 100,
+    "effort": 50,
+    "agingCost": 1
+  },
+  {
+    "title": "puzzle",
+    "gain": 10,
+    "effort": 6,
     "agingCost": 1
   }
 ]

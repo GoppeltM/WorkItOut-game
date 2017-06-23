@@ -17,7 +17,11 @@ In reality, you cannot wait forever to fulfill a request. Either your customer g
 or the request loses significance. Working for a very long time on a single request with little to no effort
 will probably not pay off. Finishing fast is a value of its own.
 
-# Feedback Cycles
+## Communication cost
+Big teams seem to struggle more than small teams, but why exactly? Communication channels add up
+exponentially, unless teams are able to minimize their interdependencies somehow.
+
+# Player moves
 Each action should have immediate or longterm consequences. Balancing those is part of the game.
 
 ## Hire
