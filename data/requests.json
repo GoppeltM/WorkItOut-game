@@ -1,26 +1,38 @@
 [
   {
     "title": "No Win, no Gain",
-    "gain": 60,
+    "gain": 100,
     "effort": 50,
-    "agingCost": 0
+    "agingCost": 10
   },
   {
-    "title": "Work quick",
-    "gain": 80,
-    "effort": 20,
+    "title": "Work quick short",
+    "gain": 150,
+    "effort": 30,
+    "agingCost": 25
+  },
+  {
+    "title": "Work quick long",
+    "gain": 1000,
+    "effort": 200,
+    "agingCost": 25
+  },
+  {
+    "title": "good longterm",
+    "gain": 1000,
+    "effort": 500,
+    "agingCost": 10
+  },
+  {
+    "title": "Small job",
+    "gain": 70,
+    "effort": 30,
     "agingCost": 5
   },
   {
-    "title": "longterm",
-    "gain": 100,
-    "effort": 50,
-    "agingCost": 1
-  },
-  {
-    "title": "puzzle",
-    "gain": 10,
-    "effort": 6,
-    "agingCost": 1
+    "title": "No chance",
+    "gain": 1000,
+    "effort": 300,
+    "agingCost": 60
   }
 ]

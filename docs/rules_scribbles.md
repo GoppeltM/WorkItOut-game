@@ -3,6 +3,7 @@ This page contains rules that may not make it into the final game
 __Planning capacities__
 A player may not deal more than 10 player stones. 
 Players that are not involved in planning may receive a time bonus
+Planning multiple players may cost communication cost (making it more feasible to delegate)
 
 __Specializations__
 Certain requests may require specializations (red, blue, green, yellow). 

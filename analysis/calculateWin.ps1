@@ -1,13 +1,46 @@
-$ruleFile = "$PSCommandPath\..\..\data\rules.json"
 $requests = Get-content "$PSCommandPath\..\..\data\requests.json" | ConvertFrom-Json
-$rules = Get-Content -Path $ruleFile | ConvertFrom-Json
+$rules = Get-Content -Path "$PSCommandPath\..\..\data\rules.json" | ConvertFrom-Json
+
+Class Profile{
+    $Name
+    $Values
+}
+$profiles = @(
+            [Profile]@{
+                Name="Full power"
+                Values = @(5,5,5,5,5,5,5,5),@(5,5,5,5,5,5,5,5),@(5,5,5,5,5,5,5,5),@(5,5,5,5,5,5,5,5),@(5,5,5,5,5,5,5,5), `
+                         @(5,5,5,5,5,5,5,5),@(5,5,5,5,5,5,5,5),@(5,5,5,5,5,5,5,5),@(5,5,5,5,5,5,5,5),@(5,5,5,5,5,5,5,5)
+            },
+            [Profile]@{
+                Name="One man show"
+                Values = @(5),@(5),@(5),@(5),@(5),@(5),@(5),@(5),@(5),@(5)
+            },
+            [Profile]@{
+                Name="Medium effort"
+                Values = @(3,3,3 ),@(3,3,3 ),@(3,3,3 ),@(3,3,3 ),@(3,3,3 ),@(3,3,3 ),@(3,3,3 ),@(3,3,3 ),@(3,3,3 ),@(3,3,3 )
+            },
+            [Profile]@{
+                Name="Adding manpower"
+                Values = @(5),@(5,5 ),@(5,5,5 ),@(5,5,5,5 ),@(5,5,5,5,5 ),@(5,5,5,5,5,5 ),@(5,5,5,5,5,5,5 ),@(5,5,5,5,5,5,5,5),@(5,5,5,5,5,5,5,5,5),@(5,5,5,5,5,5,5,5,5,5)
+            },
+            [Profile]@{
+                Name="Reducing manpower"
+                Values = @(5,5,5,5,5,5 ), @(5,5,5,5,5 ),@(5,5,5,5 ),@(5,5,5 ),@(5,5 ),@(5)
+            },
+            [Profile]@{
+                Name="Fooling around"
+                Values = @(1,1,1,1),@(1,1,1,1),@(1,1,1,1),@(1,1,1,1),@(1,1,1,1),@(1,1,1,1),@(1,1,1,1),@(1,1,1,1),@(1,1,1,1),@(1,1,1,1)
+            }
+
+        )
 
 function Update-TimePot
 {
     [CmdletBinding()]
     param(        
         [int[]]$playerStones,
-        [Parameter(ValueFromPipeline=$true)][hashtable]$request
+        [Parameter(ValueFromPipeline=$true)][hashtable]$request,
+        [PSCustomObject]$rules
     )
 
     $req = $request.Clone()   
@@ -36,43 +69,16 @@ function Update-TimePot
     $req
 }
 
-Class Profile{
-    $Name
-    $Values
-}
+
 
 function Do-AllRequests{
     [CmdletBinding()]
-    param()
-
+    param(
+        $requests = $requests,
+        $profiles = $profiles,
+        $rules = $rules
+    )
     
-    $profiles = @(
-            [Profile]@{
-                Name="Full power"
-                Values = @(5,5,5,5,5,5,5,5),@(5,5,5,5,5,5,5,5),@(5,5,5,5,5,5,5,5),@(5,5,5,5,5,5,5,5),@(5,5,5,5,5,5,5,5)
-            },
-            [Profile]@{
-                Name="One man show"
-                Values = @(5),@(5),@(5),@(5),@(5),@(5),@(5),@(5),@(5),@(5),@(5),@(5),@(5),@(5),@(5),@(5),@(5),@(5),@(5)
-            },
-            [Profile]@{
-                Name="Medium effort"
-                Values = @(3,3,3 ),@(3,3,3 ),@(3,3,3 ),@(3,3,3 ),@(3,3,3 ),@(3,3,3 ),@(3,3,3 ),@(3,3,3 ),@(3,3,3 ),@(3,3,3 ),@(3,3,3 )
-            },
-            [Profile]@{
-                Name="Adding manpower"
-                Values = @(5),@(5,5 ),@(5,5,5 ),@(5,5,5,5 ),@(5,5,5,5,5 ),@(5,5,5,5,5,5 ),@(5,5,5,5,5,5,5 ),@(5,5,5,5,5,5,5,5),@(5,5,5,5,5,5,5,5,5),@(5,5,5,5,5,5,5,5,5,5)
-            },
-            [Profile]@{
-                Name="Reducing manpower"
-                Values = @(5,5,5,5,5,5 ), @(5,5,5,5,5 ),@(5,5,5,5 ),@(5,5,5 ),@(5,5 ),@(5)
-            },
-            [Profile]@{
-                Name="Fooling around"
-                Values = @(1,1,1,1),@(1,1,1,1),@(1,1,1,1),@(1,1,1,1),@(1,1,1,1),@(1,1,1,1),@(1,1,1,1),@(1,1,1,1),@(1,1,1,1),@(1,1,1,1)
-            }
-
-        )
 
     $requests | foreach {
         "----------------------" | Write-Verbose
@@ -86,14 +92,14 @@ function Do-AllRequests{
                 "gain" = $_.gain
             }
             $profile.Name | Write-Verbose
-            $global:timePot = 200
+            $global:timePot = 1000
             $current = 0
             $won = $false
             $winningRound = 0
             try{
                 foreach ($team in $profile.Values){
                     $current = $current + 1
-                    $request = $request | Update-TimePot -playerStones $team
+                    $request = $request | Update-TimePot -playerStones $team -rules $rules
                     if($request.gain -eq 0 -and $won -ne $true){
                         $won = $true
                         $winningRound = $current              
