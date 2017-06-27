@@ -46,7 +46,7 @@ as visible on the card
 
 ## Reject request
 The project leader may reject one or more of the accepted cards, 
-but has to pay cancellation costs immediately
+but has to pay cancellation costs immediately. Cancellation costs are 20% (floored) of possible gain (NOT effort)
 
 ## Assign work
 Allows to finish one or more tasks, but spreading work will add additional costs

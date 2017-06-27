@@ -1,10 +1,28 @@
+// effort small job: 3 * 5 * 2 persons * 1 sprint = 30
+// effort medium job: 3 * 5 * 3 persons * 3 sprints = 135
+// effort large job: 3 * 5 * 5 persons * 5 sprints = 375
+// aging cost low: 10% of effort
+// aging cost medium: 25% of effort
+// aging cost high: 50% of effort
 [
   {
-    "title": "No Win, no Gain",
-    "gain": 100,
-    "effort": 50,
-    "agingCost": 10
+    "title": "Cash Cow small",
+    "gain": 50,
+    "effort": 30,
+    "agingCost": 3
   },
+  {
+    "title": "Cash Cow medium",
+    "gain": 50,
+    "effort": 150,
+    "agingCost": 15
+  },
+  {
+    "title": "Cash Cow large",
+    "gain": 50,
+    "effort": 400,
+    "agingCost": 40
+  },  
   {
     "title": "Work quick short",
     "gain": 150,

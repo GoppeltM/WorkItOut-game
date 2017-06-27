@@ -15,6 +15,7 @@ Each team member may have a secret goal, which adds up to his points. For exampl
 * Lone wolf: bonus points for requests you fulfill on your own
 * Collector: bonus points for every request that is accepted (even if it is not closed)
 * Jack of all trades: bonus points for every request you were involved in
+* Social worker: bonus points for every additional team member
 
 __Multitasking costs__
 Splitting between multiple requests should get special penalties
