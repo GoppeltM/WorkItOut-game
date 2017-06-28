@@ -39,23 +39,22 @@ You can counter communication costs with small teams.
 If all requests (i.e. tasks) were always the same size, extrapolating progress would be very simple.
 However, in reality it takes some experience to cut tasks in similar size. Also, long running tasks
 have their very own risk involved, because their gain is so far in the future.
+For the sake of gameplay, I recommend small, medium and large task clusters, so the players are able to understand
+that different sizes may require different actions.
 
 # Request types
 There are different request types, which require different strategies to approach. 
 This is important, because this means there will be no single best strategy for all requests available.
 The system is only metastable.
 
-## Stallmate
-These requests are easy to do, but will gain you next to nothing
+## Stallmate / Cash Cow
+These requests are easy to do, but will gain you next to nothing.
+In a benign scenario, these make up most of the requests.
 -> low effort, low gain, low aging
 
 ## Emergency
 These requests will be barely profitable in the short run, and highly unprofitable in the long run
 -> low effort, low gain, high aging
-
-## Cash Cow
-These scenarios are low risk projects with little gain. In a benign scenario, these make up most of the requests.
--> low effort, slighthly higher gain, low aging
 
 ## Joker
 A joker scenario basically gifts you resources -> low effort, high gain, low aging

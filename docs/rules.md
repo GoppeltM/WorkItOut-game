@@ -1,3 +1,13 @@
+# Estimates
+* effort small job: 3 * 5 * 2 persons * 1 sprint = 30
+* effort medium job: 3 * 5 * 3 persons * 3 sprints = 135
+* effort large job: 3 * 5 * 5 persons * 5 sprints = 375
+* aging cost low: 10% of effort
+* aging cost medium: 25% of effort
+* aging cost high: 50% of effort
+* communication cost: 0, 1, 4, 9, 16 per round
+
+
 # Participants
 
 ## The Customer

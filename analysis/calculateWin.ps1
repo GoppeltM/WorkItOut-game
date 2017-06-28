@@ -57,7 +57,7 @@ function Update-TimePot
     }
     
     $req.effort = $req.effort + $req.agingCost
-    $commCost = [math]::Floor($playerStones.Count * $playerStones.Count * $rules.communicationCost)
+    $commCost = [math]::Floor(($playerStones.Count - 1) * ($playerStones.Count - 1) * $rules.communicationCost)
     $req.effort = $req.effort + $commCost    
     $req.effort = $req.effort - $workTodo
     "Timepot: $timePot Effort: $($req.effort) AgingCost: $($req.agingCost) CommCost: $commCost" | Write-Debug

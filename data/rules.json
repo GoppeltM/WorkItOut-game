@@ -1,5 +1,5 @@
 {
   "stonesPerMember": 5,
-  "workPerStone": 3,
-  "communicationCost": 0.5
+  "workPerStone": 1,
+  "communicationCost": 1
 }
