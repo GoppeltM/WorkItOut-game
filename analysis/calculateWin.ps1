@@ -5,15 +5,16 @@ Class Profile{
     $Name
     $Values
 }
+$s = $rules.stonesPerMember
 $profiles = @(
             [Profile]@{
                 Name="Full power"
-                Values = @(5,5,5,5,5,5,5,5),@(5,5,5,5,5,5,5,5),@(5,5,5,5,5,5,5,5),@(5,5,5,5,5,5,5,5),@(5,5,5,5,5,5,5,5), `
-                         @(5,5,5,5,5,5,5,5),@(5,5,5,5,5,5,5,5),@(5,5,5,5,5,5,5,5),@(5,5,5,5,5,5,5,5),@(5,5,5,5,5,5,5,5)
+                Values = @($s,$s,$s,$s),@($s,$s,$s,$s),@($s,$s,$s,$s),@($s,$s,$s,$s),@($s,$s,$s,$s), `
+                         @($s,$s,$s,$s),@($s,$s,$s,$s),@($s,$s,$s,$s),@($s,$s,$s,$s),@($s,$s,$s,$s)
             },
             [Profile]@{
                 Name="One man show"
-                Values = @(5),@(5),@(5),@(5),@(5),@(5),@(5),@(5),@(5),@(5)
+                Values = @($s),@($s),@($s),@($s),@($s),@($s),@($s),@($s),@($s),@($s)
             },
             [Profile]@{
                 Name="Medium effort"
@@ -21,11 +22,11 @@ $profiles = @(
             },
             [Profile]@{
                 Name="Adding manpower"
-                Values = @(5),@(5,5 ),@(5,5,5 ),@(5,5,5,5 ),@(5,5,5,5,5 ),@(5,5,5,5,5,5 ),@(5,5,5,5,5,5,5 ),@(5,5,5,5,5,5,5,5),@(5,5,5,5,5,5,5,5,5),@(5,5,5,5,5,5,5,5,5,5)
+                Values = @($s),@($s,$s ),@($s,$s,$s ),@($s,$s,$s,$s ),@($s,$s,$s,$s,$s ),@($s,$s,$s,$s,$s,$s ),@($s,$s,$s,$s,$s,$s,$s ),@($s,$s,$s,$s,$s,$s,$s,$s),@($s,$s,$s,$s,$s,$s,$s,$s,$s),@($s,$s,$s,$s,$s,$s,$s,$s,$s,$s)
             },
             [Profile]@{
                 Name="Reducing manpower"
-                Values = @(5,5,5,5,5,5 ), @(5,5,5,5,5 ),@(5,5,5,5 ),@(5,5,5 ),@(5,5 ),@(5)
+                Values = @($s,$s,$s,$s,$s,$s ), @($s,$s,$s,$s,$s ),@($s,$s,$s,$s ),@($s,$s,$s ),@($s,$s ),@($s)
             },
             [Profile]@{
                 Name="Fooling around"
@@ -33,6 +34,46 @@ $profiles = @(
             }
 
         )
+
+function Out-Workforce{
+    [CmdletBinding()]
+    param(        
+        [Parameter(ValueFromPipeline=$true)][int[]]$playerStones    
+    )
+    $workTodo = $playerStones | Measure -Sum | Select -ExpandProperty Sum
+    $workTodo = $workTodo * $rules.workPerStone
+    $workTodo
+}
+
+function Out-CommunicationCost{
+    [CmdletBinding()]
+    param(        
+        [Parameter(ValueFromPipeline=$true)][int]$playerCount
+    )
+
+    process{
+        $commCost = 0
+        while($playerCount -gt 0)
+        {
+            $playerCount = $playerCount - 1
+            $commCost = $commCost + $playerCount                
+        }
+        $commCost
+    }    
+}
+
+function Get-GlobalStats{
+    [CmdletBinding()]
+    param()
+
+    $playerStones = ,$rules.stonesPerMember
+    for($i=1;$i -le 11;$i++){
+        $workload = Out-Workforce -playerStones $playerStones
+        $commCost = Out-CommunicationCost -playerCount $i
+        "Max workload ($i player): $workload, net: $($workload - $commCost), loss: $commCost ($($commCost / $workload * 100)%)"
+        $playerStones += ($rules.stonesPerMember)
+    }    
+}
 
 function Update-TimePot
 {
@@ -45,21 +86,20 @@ function Update-TimePot
 
     $req = $request.Clone()   
     "Timepot: $timePot Effort: $($req.effort) gain: $($req.gain)" | Write-Debug
-    $workTodo = $playerStones | Measure -Sum | Select -ExpandProperty Sum
-    $workTodo = $workTodo * $rules.workPerStone
+    
     if($req.gain -eq 0){
         $req
         return
     }
-    $global:timePot = $timePot - $workTodo
+    $workLoad = Out-Workforce -playerStones $playerStones
+    $global:timePot = $timePot - $workLoad
     if($timePot -lt 0){
         throw " Broke! workload $workTodo greater than timepot $timePot"
     }
     
-    $req.effort = $req.effort + $req.agingCost
-    $commCost = [math]::Floor(($playerStones.Count - 1) * ($playerStones.Count - 1) * $rules.communicationCost)
-    $req.effort = $req.effort + $commCost    
-    $req.effort = $req.effort - $workTodo
+    $req.effort = $req.effort + $req.agingCost    
+    $req.effort = $req.effort + (Out-CommunicationCost -playerCount $playerStones.Count)
+    $req.effort = $req.effort - $workLoad
     "Timepot: $timePot Effort: $($req.effort) AgingCost: $($req.agingCost) CommCost: $commCost" | Write-Debug
     if($req.effort -le 0 -and $req.gain -ne 0){ 
         $req.effort = 0        

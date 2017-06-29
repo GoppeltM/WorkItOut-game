@@ -1,50 +1,20 @@
-[  
+[
   {
-    "title": "Cash Cow small",
+    "title": "Stalemate small",
     "gain": 5,
     "effort": 5,
     "agingCost": 0
   },
   {
-    "title": "Cash Cow medium",
-    "gain": 50,
-    "effort": 150,
-    "agingCost": 15
+    "title": "Stalemate medium",
+    "gain": 35,
+    "effort": 20,
+    "agingCost": 1
   },
   {
-    "title": "Cash Cow large",
-    "gain": 50,
-    "effort": 400,
-    "agingCost": 40
-  },
-  {
-    "title": "Work quick short",
-    "gain": 150,
-    "effort": 30,
-    "agingCost": 25
-  },
-  {
-    "title": "Work quick long",
-    "gain": 1000,
-    "effort": 200,
-    "agingCost": 25
-  },
-  {
-    "title": "good longterm",
-    "gain": 1000,
-    "effort": 500,
-    "agingCost": 10
-  },
-  {
-    "title": "Small job",
-    "gain": 70,
-    "effort": 30,
-    "agingCost": 5
-  },
-  {
-    "title": "No chance",
-    "gain": 1000,
-    "effort": 300,
-    "agingCost": 60
-  }
+    "title": "Stalemate large",
+    "gain": 75,
+    "effort": 40,
+    "agingCost": 1
+  }  
 ]
