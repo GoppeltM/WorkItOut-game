@@ -1,5 +1,8 @@
 {
   "stonesPerMember": 5,
   "workPerStone": 1,
-  "communicationCost": 1
+  "hireCost" :  15,
+  "communicationCost": 1,
+  "initialTimepot": 30,
+  "maximumRounds" :  30
 }

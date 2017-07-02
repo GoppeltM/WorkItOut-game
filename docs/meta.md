@@ -50,34 +50,43 @@ The system is only metastable.
 ## Stallmate / Cash Cow
 These requests are easy to do, but will gain you next to nothing.
 In a benign scenario, these make up most of the requests.
+Profitable for small teams.
 -> low effort, low gain, low aging
 
 ## Emergency
-These requests will be barely profitable in the short run, and highly unprofitable in the long run
--> low effort, low gain, high aging
+These requests will be barely profitable in the short run, and highly unprofitable in the long run.
+Favorable for small to medium teams.
+-> low effort, low gain, high aging.
 
 ## Joker
-A joker scenario basically gifts you resources -> low effort, high gain, low aging
+A joker scenario that basically gifts you resources.
+Especially profitable for small to medium teams.
+ -> low effort, high gain, low aging
 
 ## Opportunity
 These scenarios are very profitable, but only for a limited time
+Profitable for large teams
 -> low effort, high gain, high aging
 
 ## Bad bank
-This scenario is expensive to kill, but will take little invest to maintain
+This scenario is expensive to kill, but will take little invest to maintain.
+Low loss with medium to large teams.
 -> high effort, low gain, low aging
 
 ## Hot potato
 The worst of all requests: expensive, low gain, and gets even more expensive quick.
 Drop it fast.
+Medium losses for big teams, high losses for small to medium teams
 -> high effort, low gain, high aging
 
 ## job creation scheme
 Binds a lot of resources for a long time, but is able to pay off if done properly
+Profitable for large to medium teams
 -> high effort, high gain, low aging
 
 ## Money pit
 Is impossible to do, even with high work load, due to outrunning aging costs.
+Unprofitable for all teams
 -> high effort, high gain, high aging
 
 
@@ -86,8 +95,10 @@ Each action should have immediate or longterm consequences. Balancing those is p
 
 ## Hire
 Personal costs are probably the highest cost factor in most modern software projects, therefore
-increasing a project size should be hurtful for the player. To make this decision even more thoughtful, 
-firing is not an option.
+increasing a project size should be hurtful for the player. Also, hiring is a very longterm decision.
+To reflect this, firing is not an option, and hiring costs (due to special training or similar) should be expensive.
+To balance this, we need a small starting pot, and a high hiring/gain ratio. On the downside, this means
+that we require a lot of rounds until hiring strategy may kick in.
 
 ## Accept request
 Accepting a request is a bet on your future: if you can fulfill it, your customer will be happy and pay you well.

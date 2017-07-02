@@ -1,7 +1,7 @@
 [
   {
     "title": "Stalemate small",
-    "gain": 5,
+    "gain": 6,
     "effort": 5,
     "agingCost": 0
   },
@@ -16,5 +16,131 @@
     "gain": 75,
     "effort": 40,
     "agingCost": 1
-  }  
+  },
+  {
+    "title": "Emergency small",
+    "gain": 6,
+    "effort": 5,
+    "agingCost": 3
+  },
+  {
+    "title": "Emergency medium",
+    "gain": 35,
+    "effort": 20,
+    "agingCost": 3
+  },
+  {
+    "title": "Emergency large",
+    "gain": 75,
+    "effort": 40,
+    "agingCost": 3
+  },
+  {
+    "title": "Joker small",
+    "gain": 12,
+    "effort": 5,
+    "agingCost": 1
+  },
+  {
+    "title": "Joker medium",
+    "gain": 60,
+    "effort": 20,
+    "agingCost": 1
+  },
+  {
+    "title": "Joker large",
+    "gain": 110,
+    "effort": 40,
+    "agingCost": 1
+  },
+  {
+    "title": "Opportunity small",
+    "gain": 10,
+    "effort": 5,
+    "agingCost": 2
+  },
+  {
+    "title": "Opportunity medium",
+    "gain": 60,
+    "effort": 20,
+    "agingCost": 4
+  },
+  {
+    "title": "Opportunity large",
+    "gain": 110,
+    "effort": 40,
+    "agingCost": 4
+  },
+  {
+    "title": "Bad bank small",
+    "gain": 6,
+    "effort": 7,
+    "agingCost": 0
+  },
+  {
+    "title": "Bad bank medium",
+    "gain": 35,
+    "effort": 28,
+    "agingCost": 1
+  },
+  {
+    "title": "Bad bank large",
+    "gain": 75,
+    "effort": 50,
+    "agingCost": 1
+  },
+  {
+    "title": "Hot potato small",
+    "gain": 6,
+    "effort": 8,
+    "agingCost": 2
+  },
+  {
+    "title": "Hot potato medium",
+    "gain": 35,
+    "effort": 30,
+    "agingCost": 4
+  },
+  {
+    "title": "Hot potato large",
+    "gain": 75,
+    "effort": 50,
+    "agingCost": 4
+  },
+  {
+    "title": "job creation scheme small",
+    "gain": 12,
+    "effort": 7,
+    "agingCost": 1
+  },
+  {
+    "title": "job creation scheme medium",
+    "gain": 60,
+    "effort": 28,
+    "agingCost": 1
+  },
+  {
+    "title": "job creation scheme large",
+    "gain": 110,
+    "effort": 50,
+    "agingCost": 1
+  },
+  {
+    "title": "Money pit small",
+    "gain": 12,
+    "effort": 9,
+    "agingCost": 2
+  },
+  {
+    "title": "Money pit medium",
+    "gain": 60,
+    "effort": 36,
+    "agingCost": 4
+  },
+  {
+    "title": "Money pit large",
+    "gain": 110,
+    "effort": 60,
+    "agingCost": 4
+  }
 ]
