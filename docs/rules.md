@@ -1,13 +1,3 @@
-# Estimates
-* effort small job: 3 * 5 * 2 persons * 1 sprint = 30
-* effort medium job: 3 * 5 * 3 persons * 3 sprints = 135
-* effort large job: 3 * 5 * 5 persons * 5 sprints = 375
-* aging cost low: 10% of effort
-* aging cost medium: 25% of effort
-* aging cost high: 50% of effort
-* communication cost: 0, 1, 4, 9, 16 per round
-
-
 # Participants
 
 ## The Customer
@@ -32,15 +22,16 @@ The project leader starts immediately with 5 Stones.
 # Round
 Each round is a sequence of these steps:
 1. The request stack is restocked
-1. For each active request, add as many time units 
-   to the effort stack as described on the request (aging cost).
-1. For each different player stone on each request, add one time unit to the effort stack.
+1. Let the players perform their moves. Once all moves are done, a new round starts.
+1. For each different player stone on each request, add time units to the effort stack.
    Multiple stones from the same player still cost only one unit. (Communication / Multitasking effort)
 1. reset each player stone back to each player.
    For each resetted stone, remove one time unit from the time pot (i.e. paying off work time).
 1. For each request that has an empty effort stack, add the request reward to the time pot,
    and remove the request from the game.
-1. Let the players perform their moves. Once all moves are done, a new round starts.
+1. For each active request, add as many time units 
+   to the effort stack as described on the request (aging cost).
+
 
 # Moves
 

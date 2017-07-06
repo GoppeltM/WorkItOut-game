@@ -133,7 +133,7 @@ function Do-AllRequests{
         $req = $request.Clone()   
         "Timepot: $timePot Effort: $($req.effort) gain: $($req.gain)" | Write-Debug
     
-        if($req.gain -eq 0){
+        if($req.effort -eq 0){
             $req
             return
         }
@@ -147,9 +147,8 @@ function Do-AllRequests{
         $req.effort = $req.effort - $workLoad    
         "Timepot: $timePot Effort: $($req.effort) AgingCost: $($req.agingCost) CommCost: $commCost" | Write-Debug
         if($req.effort -le 0 -and $req.gain -ne 0){ 
-            $req.effort = 0        
-            $global:timePot = $timePot + $req.gain
-            $req.gain = 0        
+            $req.effort = 0
+            return $req                    
         }
         $req.effort = $req.effort + $req.agingCost
         $req
@@ -157,17 +156,16 @@ function Do-AllRequests{
 
 
     $requests | foreach {
-        "----------------------" | Write-Verbose
-        "Title: $($_.title)" | Write-Verbose
-        "        " | Write-Verbose
-
+        # "----------------------" | Write-Verbose
+        # "Title: $($_.title)" | Write-Verbose
+        # "        " | Write-Verbose
+        [PSCustomObject]@{ Title="==$($_.title)=="; WinningRound="-"; Invest="-"; Won="-"; Final="-"; Ratio="-"}
         foreach ($profile in $profiles){
             $request = @{
                 "effort" = $_.effort
                 "agingCost" = $_.agingCost
                 "gain" = $_.gain
-            }
-            $profile.Name | Write-Verbose
+            }            
             $global:timePot = 1000
             $current = 0
             $won = $false
@@ -176,15 +174,20 @@ function Do-AllRequests{
                 foreach ($team in $profile.Values){
                     $current = $current + 1
                     $request = $request | Update-TimePot -playerStones $team -rules $rules
-                    if($request.gain -eq 0 -and $won -ne $true){
-                        $won = $true
-                        $winningRound = $current              
-                    }
+                    if($request.effort -eq 0 -and $winningRound -eq 0){
+                        $winningRound = $current
+                        continue
+                    }                                            
                 }
-                if($won){
-                    " Won after $winningRound rounds" | Write-Verbose
-                }                
-                " final time pot: $global:timePot" | Write-Verbose
+                $lost = 1000 - $global:timePot
+                $wonSum = 0
+                if($winningRound -ne 0){
+                    $global:timePot = $timePot + $request.gain
+                    $wonSum = $global:timePot - 1000
+                    $request.gain = 0                
+                }
+                
+                [PSCustomObject]@{ Title=$profile.Name; WinningRound=$winningRound; Invest=$lost; Won=$wonSum; Final=$timePot; Ratio=$($wonSum / $lost)}
             }
             catch{
                 $_.Exception.Message | Write-Verbose
