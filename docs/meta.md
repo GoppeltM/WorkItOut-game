@@ -6,6 +6,14 @@ and assumes that all other effects are neglible.
 But what if they are not? For now, this game incorporates two factors (aging and communication cost)
 that both may influence project success harder than customer satisfaction in certain scenarios
 
+# Participants
+
+## The Customer
+The customer is played by the game leader, and has an unlimited amount of requests.
+
+## Project leader
+The first player is designated as project leader, and may perform (or delegate) any game move
+
 
 # Meta thoughts about gameplay
 
