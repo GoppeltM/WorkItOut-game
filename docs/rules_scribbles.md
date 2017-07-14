@@ -13,14 +13,19 @@ To specialize, you have to spend 5 time units in one round to get the specializa
 Managing player stones (i.e. project leader) may require a specialization.
 
 __Interactions__
-How to enforce cooperation? Project leader may get elected, boycotted or vetoed. 
+How to enforce cooperation? Project leader may get elected, boycotted or vetoed.
+* anonymous vote with (limited?) voting stones
+How to enforce delegation?
+* Limit the amount of actions a single person can decide
+* Give buffs or bonusses to people who delegate
 
 __Personal Traits__
-Each team member may have a secret goal, which adds up to his points. For example:
-* Lone wolf: bonus points for requests you fulfill on your own
-* Collector: bonus points for every request that is accepted (even if it is not closed)
-* Jack of all trades: bonus points for every request you were involved in
-* Social worker: bonus points for every additional team member
+Each team member may have a secret goal, which adds up to his points, 
+or makes him lose the game if he/she does not fulfill it. For example:
+* Lone wolf: finish at least two requests on your own
+* Collector: your team must have had accepted at least 10 requests until the end
+* Jack of all trades: you have been involved in at least 5 requests
+* Unionist: your team contains at least 7 members
 
 __Multitasking costs__
 Splitting between multiple requests should get special penalties
