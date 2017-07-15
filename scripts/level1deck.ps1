@@ -77,5 +77,5 @@ $node.Save("$PSCommandPath\..\..\docs\timemarkers.html")
 
 # sample
 [xml]$sample = '<html><head><link rel="stylesheet" href="cardstyle.css" /></head><body>' `
-     + ($requestCards.html.body.table[0].OuterXml, $players[0], $times[0]  -join "") + "</body></html>"
+     + ($requestCards.html.body.table[0].OuterXml, $players[0], $players[6], $times[0], $times[50]  -join "") + "</body></html>"
 $sample.Save("$PSCommandPath\..\..\docs\sample.html")

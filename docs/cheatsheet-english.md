@@ -18,7 +18,7 @@ Give each player his 5 player markers
 Lay out all cards in front of you, face up.  
 For each fill the effort stack from the global pot
 1. __Reject requests__  
-Remove request, and pay cancellation cost from project pot
+Remove any requests you like, and pay cancellation cost from project pot
 1. __Assign work__  
 Move as many player markers as desired to accepted requests.
 1. __Add communication costs to each request__  
