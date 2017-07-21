@@ -34,18 +34,19 @@ function New-HtmlCards{
 $requestCards = New-HtmlCards -stamp $template.table
 $requestCards.Save("$PSCommandPath\..\..\docs\level1cards-german.html")
 [xml]$template = Get-Content -Path $PSCommandPath\..\l1template-english.html
-$requestCards = New-HtmlCards -stamp $template.table -savePath "$PSCommandPath\..\..\docs\level1cards-english.html"
-$requestCards.Save("$PSCommandPath\..\..\docs\level1cards-german.html")
+$requestCards = New-HtmlCards -stamp $template.table
+$requestCards.Save("$PSCommandPath\..\..\docs\level1cards-english.html")
 
 $colors = "black", "red", "blue", "green", "yellow", "cyan", "purple", "orange", "lightgrey", "brown"
 $playerTemplate = '<svg width="120" height="110" xmlns="http://www.w3.org/2000/svg">                        
-                    <path d ="M 0 5 L 0 95 L 90 95 L 0 5" stroke ="{0}" stroke-width="10" fill="none"/> 
-                    <path d ="M 20 0 L 110 90 L 110 0 L 20 0" stroke ="{0}" stroke-width="10" fill="none"/> 
+                    <path d ="M 4 10 L 4 100 L 94 100 Z" stroke ="{0}" stroke-width="10" fill="none"/> 
+                    <path d ="M 20 4 L 110 94 L 110 4 Z" stroke ="{0}" stroke-width="10" fill="none"/> 
                    </svg>'
 
 $timeTemplate = '<svg width="60" height="60" xmlns="http://www.w3.org/2000/svg"> 
                     <rect width="60" height="60" fill="white" stroke="{0}" stroke-width="20" />                    
-                    <text x="33" y="40" text-anchor="middle" font-family="sans-serif" font-size="20px" font-weight="bold">
+                    <text x="33" y="40" text-anchor="middle" font-family="sans-serif" 
+                        font-size="30px" font-weight="bold" font-stretch="{2}">
                         {1}
                     </text> 
         </svg>'
@@ -56,7 +57,7 @@ $players = $colors | foreach{
     $playerTemplate -f $color
     $playerTemplate -f $color
     '<svg width="120" height="110" xmlns="http://www.w3.org/2000/svg">                        
-                    <path d ="M 0 5 L 0 95 L 90 95 L 0 5" stroke ="{0}" stroke-width="10" fill="none"/>                     
+                    <path d ="M 4 10 L 4 100 L 94 100 Z" stroke ="{0}" stroke-width="10" fill="none"/> 
                    </svg>' -f $color
 }
 [xml]$node = "<html><body>" + ($players -join "") + "</body></html>"
@@ -64,14 +65,23 @@ $node.Save("$PSCommandPath\..\..\docs\level1playermarkers.html")
 
 $currColors = $colors.GetEnumerator()
 # Time markers
-$times = "1", "2", "3", "6", "12", "24", "48", "96", "192", "384" | foreach{
+$times = "1", "2", "3", "6", "12", "24", "48", "96" | foreach{
     $value = $_
     $currColors.MoveNext() | Out-Null
     $color = $currColors.Current
     for($i = 0;$i -lt 15;$i++){
-        $timeTemplate -f $color, $value
+        $timeTemplate -f $color, $value, "normal"
     }    
 }
+$times += "192", "384" | foreach{
+    $value = $_
+    $currColors.MoveNext() | Out-Null
+    $color = $currColors.Current
+    for($i = 0;$i -lt 15;$i++){
+        $timeTemplate -f $color, $value, "condensed"
+    }    
+}
+
 [xml]$node = "<html><body>" + ($times -join "") + "</body></html>"
 $node.Save("$PSCommandPath\..\..\docs\timemarkers.html")
 

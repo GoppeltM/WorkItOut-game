@@ -2,7 +2,8 @@ table {
     float: left;
     margin: 5px;
     height: 200px;
-    width: 50px;
+    width: 200px;
+    max-width:200px;
     border: solid;
     page-break-inside: avoid;
 }
@@ -22,7 +23,7 @@ td {
     font-family: "times new roman",times,serif;
 }
 
-    td.effortcell {
-        font-size: x-large;
+    td.effortcell {        
+        font-size: xx-large;
         border-top: dotted;
     }
