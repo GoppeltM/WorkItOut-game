@@ -1,18 +1,18 @@
 This page contains rules that may not make it into the final game
 
-__Planning capacities__  
+## Planning capacities
 A player may not deal more than 10 player stones. 
 Players that are not involved in planning may receive a time bonus
 Planning multiple players may cost communication cost (making it more feasible to delegate)
 Requests may be traded, but must stay covered
 
-__Specializations__  
+## Specializations
 Certain requests may require specializations (red, blue, green, yellow). 
 Only members with proper specialization may add stones to them. 
 To specialize, you have to spend 5 time units in one round to get the specialization marker.
 Managing player stones (i.e. project leader) may require a specialization.
 
-__Interactions__  
+## Interactions
 How to enforce cooperation? Project leader may get elected, boycotted or vetoed. 
 * anonymous vote with (limited?) voting stones
 How to enforce delegation?
@@ -21,7 +21,21 @@ How to enforce delegation?
 * Give buffs or bonusses to people who delegate their markers to another person, e.g. :
 for every 10 chips you can collect you get 1 more. Everyone can decide for his own markers
 
-__Personal Agendas__  
+## Personal Agendas
+Each player may have two goals, so he may adopt his strategy, 
+depending on how other team members behave
+
+### Moving from Cooperative to competitive
+Change the game goal from total score to personal scores. 
+Create goals that partially require cooperation, and partially create conflicts. Scoring points:
+* work done
+* specializations earned
+* personal agendas fulfilled
+* work delegated
+* request fulfilled
+
+### Goals
+
 Each team member may have a secret goal, which adds up to his points, 
 or makes him lose the game if he/she does not fulfill it. For example:
 * Lone wolf: finish at least two requests on your own
@@ -48,14 +62,7 @@ Possible goals:
 * : earn two points for 10 - hired players
 * Money maker: earn 1/5th of the final project pot
 
-__Moving from Cooperative to competitive__  
-Change the game goal from total score to personal scores. 
-Create goals that partially require cooperation, and partially create conflicts. Scoring points:
-* work done
-* specializations earned
-* personal agendas fulfilled
-* work delegated
-* request fulfilled
 
-__Multitasking costs__  
+
+## Multitasking costs
 Splitting between multiple requests should get special penalties

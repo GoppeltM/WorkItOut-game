@@ -1,5 +1,6 @@
 $requests = Get-content "$PSCommandPath\..\..\data\requests.json" | ConvertFrom-Json
 $rules = Get-Content -Path "$PSCommandPath\..\..\data\rules.json" | ConvertFrom-Json
+$level1deck
 
 Class Profile{
     $Name
@@ -108,6 +109,10 @@ function Get-GlobalStats{
 
     "Maximum team size: 5 cards per round, peak workforce per job ca. 5 players = 25 players" | Write-Verbose
     "Balanced team size: 3 cards per round, peak workforce per job ca. 3 players = 9 players" | Write-Verbose
+    $gainstat = $requests | measure -Property gain -Sum -Average
+    "Total gain: $($gainstat.Sum), avg: $($gainstat.Average)" | Write-Verbose
+    $effortstat = $requests | measure -Property effort -Sum -Average
+    "Total effort: $($effortstat.Sum), avg: $($effortstat.Average)" | Write-Verbose
 }
 
 
