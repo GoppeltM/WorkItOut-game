@@ -3,6 +3,6 @@
   "workPerStone": 1,
   "hireCost" :  15,
   "communicationCost": 1,
-  "initialTimepot": 30,
+  "initialTimepot": 50,
   "maximumRounds" :  30
 }

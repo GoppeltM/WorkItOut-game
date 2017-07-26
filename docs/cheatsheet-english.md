@@ -1,6 +1,6 @@
 # Preparation
 1. Collect all time units in global pot
-1. Set 30 time units as project pot
+1. Set 50 time units as project pot
 1. Give the first player his 5 player markers
 1. Start the first round
 
