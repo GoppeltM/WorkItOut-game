@@ -1,4 +1,4 @@
-# Summary
+﻿# Summary
 
 This page is meant as a guidance how to develop the game, and its core principles.
 The basic idea behind this game is that software project management often focusses on raw work force,
@@ -165,7 +165,7 @@ He might have these goals for himself, but also for others.
 For example, due to ethical reasons, someone might be interested in reducing unemployment,
 and in increasing salary for everyone. To meet these goals, you could follow multiple strategies, for example:
 1. project should have a big project time pot (money if you are shareholder)
-1. project should have a lot of accepted requests (career if you can count the experience from all requests towards your resum�e)
+1. project should have a lot of accepted requests (career if you can count the experience from all requests towards your resumée)
 1. project should have many team members (social safety because small projects are more likely to get cancelled)
 1. project should have few rejected requests (career, if rejecting requests may hurt your customer or big boss reputation)
 1. project should have a lot of finished requests (curiosity/career, if you are able to learn more from each new task than from one big one)
