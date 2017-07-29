@@ -165,7 +165,7 @@ He might have these goals for himself, but also for others.
 For example, due to ethical reasons, someone might be interested in reducing unemployment,
 and in increasing salary for everyone. To meet these goals, you could follow multiple strategies, for example:
 1. project should have a big project time pot (money if you are shareholder)
-1. project should have a lot of accepted requests (career if you can count the experience from all requests towards your resumée)
+1. project should collect a lot of gain (career, if big projects recommend you for other tasks)
 1. project should have many team members (social safety because small projects are more likely to get cancelled)
 1. project should have few rejected requests (career, if rejecting requests may hurt your customer or big boss reputation)
 1. project should have a lot of finished requests (curiosity/career, if you are able to learn more from each new task than from one big one)
@@ -175,7 +175,7 @@ This means we have 5+4+3+2+1=15 possible goal pairs,
 i.e. each team member is likely to have a unique goal combo.
 At first it doesn't look like these goals are in conflict, but let's make a few examples:
 * Many team members may work less efficient due to increasing communication cost and low workload
-* Accepting many requests may hurt the time pot due to aging costs
+* Accepting many big requests with a lot of gain may hurt efficiency
 * Rejecting few requests will hurt your time pot, but may keep many team members busy
 * many finished requests may avoid big, worthy tasks that bind a lot of workforce for a long time
 * Struggling for control may favor popular choices over efficient ones
@@ -188,13 +188,13 @@ few rejected requests will hurt your project pot in the long run, therefore he c
 He dedices to go for efficiency, because it promises a lower risk of becoming broke. He concentrates on
 finishing one job after another, and hires a new team member  
 __Player B 2/5__  
-Accepting a lot of requests and finishing a lot of requests play well together, but both require small jobs.
-He may veto accepting big jobs. He is not able to gain control (yet), 
-but will definitely be in favor of expanding the team.  
+Accepting big requests and finishing a lot of requests exclude each other.
+He will definitely be in favor of expanding the team. He is not interested in efficiency either way,
+but in expansion.  
 __Player C 2/3__  
-Accepting a lot of requests with a lot of team members works well together, but may either spread work thin,
+Accepting big requests with a lot of team members works well together, but may either spread work thin,
 or rise communication cost. This way or another, efficiency is declining. Player B and C may overrule A in order
-to accept more small requests, even those that are not efficient.
+to accept more requests, even those that are not efficient.
 Player A sees how the project pot is shrinking. He suggests to B that accepting jobs is okay, 
 as long as they are getting finished, so A can score points with fewer rejects.
 
