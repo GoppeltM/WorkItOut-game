@@ -49,6 +49,10 @@ that have at least something in common.
 However, if everyone has just one goal, there is natural optimum where the system will settle on.
 If everyone has at least two goals, there are multiple optimums, which you may switch, depending on the
 current situation.
+## Keep secret?
+Should the players know which roles they get before they are hired? Should roles be made public?
+For the game, it probably creates more suspense if it is up to the players to decide what they reveal.
+If they don't know before hiring, they can't be forced into telling.
 
 
 # Costs (time)

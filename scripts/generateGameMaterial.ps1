@@ -33,9 +33,9 @@ $playerTemplate = '<svg width="120" height="110" xmlns="http://www.w3.org/2000/s
                    </svg>'
 
 $timeTemplate = '<svg width="60" height="60" xmlns="http://www.w3.org/2000/svg"> 
-                    <rect width="60" height="60" fill="white" stroke="{0}" stroke-width="20" />                    
+                    <rect x="5" y="5" width="50" height="50" fill="white" stroke="{0}" stroke-width="10" />                    
                     <text x="33" y="40" text-anchor="middle" font-family="sans-serif" 
-                        font-size="30px" font-weight="bold" font-stretch="{2}">
+                        font-size="30px" font-weight="bold" font-stretch="normal">
                         {1}
                     </text> 
         </svg>'
@@ -58,16 +58,8 @@ $times = "1", "2", "3", "6", "12", "24", "48", "96" | foreach{
     $value = $_
     $currColors.MoveNext() | Out-Null
     $color = $currColors.Current
-    for($i = 0;$i -lt 15;$i++){
-        $timeTemplate -f $color, $value, "normal"
-    }    
-}
-$times += "192", "384" | foreach{
-    $value = $_
-    $currColors.MoveNext() | Out-Null
-    $color = $currColors.Current
-    for($i = 0;$i -lt 15;$i++){
-        $timeTemplate -f $color, $value, "condensed"
+    for($i = 0;$i -lt 18;$i++){
+        $timeTemplate -f $color, $value
     }    
 }
 
