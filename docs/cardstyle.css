@@ -3,10 +3,19 @@ table {
     margin: 5px;
     height: 200px;
     width: 200px;
-    max-width:200px;
+    max-width: 200px;
     border: solid;
     page-break-inside: avoid;
 }
+
+img {
+    width:30px;
+    height:30px;
+}
+
+    img.hammer {
+        transform: rotate(90deg);
+    }
 
 tr {
     height: 10px;
@@ -17,13 +26,13 @@ tr {
     }
 
 td {
-    font-size: large;
+    font-size: xx-large;
     text-align: center;
     font-weight: bolder;
     font-family: "times new roman",times,serif;
 }
 
-    td.effortcell {        
+    td.effortcell {
         font-size: xx-large;
         border-top: dotted;
     }

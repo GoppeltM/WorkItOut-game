@@ -24,3 +24,12 @@ $coopBonus = ($teamMembers - 1) * 25
 "Cooperation bonus: $coopBonus"
 "Estimated optimal surplus (gain + coop - effort - rejects - hiring): " + ` 
     + "$($finishedCards * $avgGain + $coopBonus - $finishedCards * $avgEffort - $rejectedCards * $avgRejection - 15 * 8)"
+
+""
+"Normalized goals:"
+"1 point per 25 surplus (10p for 250)"
+"1 point per 100 gain (10p for 1000)"
+"1 point per team member (10p for 10)"
+"25 points. -1 Point per reject (10p for 15)"
+"0.5 points per finished card (10p for 20)"
+"2 points per team member that gained control (10p for 5)"

@@ -11,20 +11,19 @@ function New-HtmlCards{
 		$copy.tr.td | where {$_.id -eq "aging"} | foreach{$_.'#text' = $card.agingCost.ToString()}
 		$cancelCost = [int]($card.effort / 5)
 		$copy.tr.td | where {$_.id -eq "cancelCost"} | foreach{$_.'#text' = $cancelCost.ToString()}
-		$copy.tr.td | where {$_.id -eq "effort"} | foreach{$_.'#text' = $card.effort.ToString()}
+		$copy.tr.td.div | where {$_.id -eq "effort"} | foreach{$_.'#text' = $card.effort.ToString()}
 		$copy.tr.td | where {$_.id -ne $null} | foreach{$_.RemoveAttribute('id')}
+        $copy.tr.td.div | where {$_.id -ne $null} | foreach{$_.RemoveAttribute('id')}
 
 		$imported = $harness.ImportNode($copy, $true)
 		$body.AppendChild($imported) | Out-Null
 	}
 	$harness
 }
-[xml]$template = Get-Content -Path $PSCommandPath\..\l1template-german.html
+# request cards
+[xml]$template = Get-Content -Path $PSCommandPath\..\cardTemplate-icon.html
 $requestCards = New-HtmlCards -stamp $template.table -deck $deck
-$requestCards.Save("$PSCommandPath\..\..\docs\level1cards-german.html")
-[xml]$template = Get-Content -Path $PSCommandPath\..\l1template-english.html
-$requestCards = New-HtmlCards -stamp $template.table -deck $deck
-$requestCards.Save("$PSCommandPath\..\..\docs\level1cards-english.html")
+$requestCards.Save("$PSCommandPath\..\..\docs\requestcards.html")
 
 $colors = "black", "red", "blue", "green", "yellow", "cyan", "purple", "orange", "lightgrey", "brown"
 $playerTemplate = '<svg width="120" height="110" xmlns="http://www.w3.org/2000/svg">                        

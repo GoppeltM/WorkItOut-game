@@ -36,7 +36,7 @@ In this game, the leader is voted into control. The more team members vote for h
 the working bonus (due to higher effectivity), 
 but of course the leader's decision may not be in your own interest.
 
-# Conflict of interest
+## Conflict of interest
 As long as anyone agree on the same goal (e.g. return of invest), it is easy to cooperate. 
 If anyone has completely different goals
 (e.g. one wants to gain as much as possible, the other one wants to ruin the project),
@@ -129,7 +129,6 @@ Is impossible to do, even with high work load, due to outrunning aging costs.
 Unprofitable for all teams
 -> high effort, high gain, high aging
 
-
 # Player moves
 Each action should have immediate or longterm consequences. Balancing those is part of the game.
 
@@ -184,6 +183,7 @@ At first it doesn't look like these goals are in conflict, but let's make a few 
 * many finished requests may avoid big, worthy tasks that bind a lot of workforce for a long time
 * Struggling for control may favor popular choices over efficient ones
 
+## Dual goals
 How will dual goals affect your behaviour?
 Let's start with one member, and see how behaviour adopts with a growing group
 
@@ -202,4 +202,6 @@ to accept more requests, even those that are not efficient.
 Player A sees how the project pot is shrinking. He suggests to B that accepting jobs is okay, 
 as long as they are getting finished, so A can score points with fewer rejects.
 
+This means that most goals actually do NOT favor efficiency, but all of them require a positive project pot,
+i.e. that the project keeps running.
 
