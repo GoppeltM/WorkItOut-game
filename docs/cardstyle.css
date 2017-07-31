@@ -9,13 +9,13 @@ table {
 }
 
 img {
-    width:30px;
-    height:30px;
+    width: 30px;
+    height: 30px;
 }
 
-    img.hammer {
-        transform: rotate(90deg);
-    }
+.hammer {
+    transform: rotate(90deg);
+}
 
 tr {
     height: 10px;

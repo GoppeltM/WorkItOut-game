@@ -1,4 +1,5 @@
-﻿# Work it out - Overview page
+﻿
+## Dev resources
 
 * [Meta information](meta.md)
 * [Rules playground](rules_scribbles.md)

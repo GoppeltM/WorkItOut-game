@@ -8,8 +8,11 @@
 Earn as many project pot time units after 25 rounds as possible.
 Put yourself into the highscore list
 
+
+
 # Round
 1. __Add aging cost to each request__  
+<img src="icons/hourglass.svg" alt="Hourglass" width="10px">
 add time to each accepted request from global pot
 1. __Pay your team__  
 Remove 5 time units for each team member from your project pot
