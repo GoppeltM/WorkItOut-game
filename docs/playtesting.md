@@ -1,6 +1,27 @@
 This page contains notes about the playtesting sessions that were held - 
 most recent at the top.
 
+# 1.8.2017
+* red/darkred are really difficult to distinguish.
+* There is no 9 time marker, but it is confusing. Consider adding a dot: “6.”
+* Stalemate cards are more dangerous than you might think. You are tied for a long time, even though much better opportunites may be available
+* Letting two team members work is more expensive than most cancellation costs, i.e. cancelling in between for a better request might be beneficial
+* keeping track of the current step and round is not easy. Supporting this would help a lot.
+* Communication seems to balance against aging cost. 
+  As soon as you add a third person to the same task, added communication cost
+  is probably higher than aging, so it is better to spread your manpower.
+  This also limits team size much more than anticipated, more than 5-6 players will
+  probably never play within 25 rounds. 
+  Putting 3 or 4 players on the same task is only beneficial if other tasks are too risky
+ 
+Round stats:
+* Total time: ca. 20 mins, ca. 10 rounds (?)
+* 7 requests fulfilled (125 points)
+* 4 rejected (205 points, paid cancellation  25)
+* 3 players
+* project pot mostly never above 70
+
+
 # 25.7.2017
 First few rounds showed that expenses for cancelling projects is immense.
 If you are unlucky, you will run out of time before fulfilling a single request.

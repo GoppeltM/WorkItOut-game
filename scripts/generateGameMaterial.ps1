@@ -25,7 +25,7 @@ function New-HtmlCards{
 $requestCards = New-HtmlCards -stamp $template.table -deck $deck
 $requestCards.Save("$PSCommandPath\..\..\docs\requestcards.html")
 
-$colors = "black", "red", "blue", "green", "yellow", "cyan", "purple", "orange", "lightgrey", "brown"
+$colors = "black", "red", "blue", "green", "yellow", "cyan", "purple", "orange", "lightgrey"
 $playerTemplate = '<svg width="120" height="110" xmlns="http://www.w3.org/2000/svg">                        
                     <path d ="M 4 10 L 4 100 L 94 100 Z" stroke ="{0}" stroke-width="10" fill="none"/> 
                     <path d ="M 20 4 L 110 94 L 110 4 Z" stroke ="{0}" stroke-width="10" fill="none"/> 
@@ -53,7 +53,7 @@ $node.Save("$PSCommandPath\..\..\docs\level1playermarkers.html")
 
 $currColors = $colors.GetEnumerator()
 # Time markers
-$times = "1", "2", "3", "6", "12", "24", "48", "96" | foreach{
+$times = "1", "2", "3", "6.", "12", "24", "48", "96" | foreach{
     $value = $_
     $currColors.MoveNext() | Out-Null
     $color = $currColors.Current
