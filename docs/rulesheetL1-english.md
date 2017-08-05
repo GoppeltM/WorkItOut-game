@@ -1,12 +1,12 @@
 # Symbols
-* Global pot: <img src="icons/mono-apollon.svg" alt="Global pot" height="15px">
-* Project pot: <img src="icons/1459610756_dollar-bag.svg" alt="Hourglass" height="15px">
-* Aging cost: <img src="icons/mono-clock.svg" alt="Aging cost" height="15px">
-* Effort: <img src="icons/mono-control.svg" alt="Effort" height="15px">
-* Cancel Cost: <img src="icons/mono-endturn.svg" alt="Cancel" height="15px">
-* Winning points: <img src="icons/Simple-Award-Ribbon.svg" alt="Win" height="15px">
-* Requests: <img src="icons/mono-package-games-cards.svg" alt="Request" height="15px">
-* Player: <img src="icons/pawn.svg" alt="Hourglass" height="15px">
+* Global pot: <img src="icons/mono-apollon.svg" alt="Global pot" height="15"/>
+* Project pot: <img src="icons/1459610756_dollar-bag.svg" alt="Hourglass" height="15"/>
+* Aging cost: <img src="icons/mono-clock.svg" alt="Aging cost" height="15"/>
+* Effort: <img src="icons/mono-control.svg" alt="Effort" height="15"/>
+* Cancel Cost: <img src="icons/mono-endturn.svg" alt="Cancel" height="15"/>
+* Winning points: <img src="icons/Simple-Award-Ribbon.svg" alt="Win" height="15"/>
+* Requests: <img src="icons/mono-package-games-cards.svg" alt="Request" height="15"/>
+* Player: <img src="icons/pawn.svg" alt="Hourglass" height="15"/>
 
 # Preparation
 1. Collect all time units in global pot
