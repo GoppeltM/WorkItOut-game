@@ -1,4 +1,6 @@
+$ErrorActionPreference = 'Stop'
 . $PSScriptRoot\level1deck.ps1
+Add-Type -AssemblyName 'System.Xml.Linq'
 
 function New-HtmlCards{
 	param($stamp, $deck)
@@ -66,6 +68,10 @@ $times = "1", "2", "3", "6.", "12", "24", "48", "96" | foreach{
 $node.Save("$PSCommandPath\..\..\docs\timemarkers.html")
 
 # sample
-[xml]$sample = '<html><head><link rel="stylesheet" href="cardstyle.css" /></head><body>' `
-     + ($requestCards.html.body.table[0].OuterXml, $players[0], $players[6], $times[0], $times[50]  -join "") + "</body></html>"
+[System.Xml.Linq.XDocument]$sample = [System.Xml.Linq.XDocument]::Load("$PSCommandPath\..\harness.html")
+$sample.Root[0].Add([System.Xml.Linq.XElement]::Parse($requestCards.html.body.table[2].OuterXml))
+$sample.Root[0].Add([System.Xml.Linq.XElement]::Parse($players[0]))
+$sample.Root[0].Add([System.Xml.Linq.XElement]::Parse($players[6]))
+$sample.Root[0].Add([System.Xml.Linq.XElement]::Parse($times[0]))
+$sample.Root[0].Add([System.Xml.Linq.XElement]::Parse($times[50]))
 $sample.Save("$PSCommandPath\..\..\docs\sample.html")

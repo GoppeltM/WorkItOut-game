@@ -1,9 +1,11 @@
-<html>
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <link rel="stylesheet" href="cardstyle.css" />
+    <title>Printable card set</title>
   </head>
   <body>
-    <table class="cheatsheet" xmlns="http://www.w3.org/1999/xhtml">
+    <table class="cheatsheet">
       <tr>
         <td>
           <svg width="40" height="40">
@@ -11,8 +13,7 @@
             <circle cx="20" cy="20" r="20" stroke="black" fill="None" />
           </svg>
         </td>
-        <td>
-                1<img src="icons/mono-package-games-cards.svg" alt="Request" height="40" />=&gt;
+        <td>1<img src="icons/mono-package-games-cards.svg" alt="Request" height="40" />=&gt;
                 <img src="icons/pawn.svg" alt="Hourglass" height="40" />?
             </td>
       </tr>
@@ -47,7 +48,8 @@
           </svg>
         </td>
         <td>
-          <img src="icons/pawn.svg" alt="Hourglass" height="40" /> *               
+          <img src="icons/pawn.svg" alt="Hourglass" height="40" />
+                *               
                 <img src="icons/pawn.svg" alt="Hourglass" height="40" />?
             </td>
       </tr>
@@ -71,7 +73,7 @@
         </td>
         <td>
           <img src="icons/1459610756_dollar-bag.svg" alt="Hourglass" height="40" />+=
-                <img src="icons/mono-package-games-cards.svg" alt="Request" height="40" /></td>
+                <img src="icons/money_dollar.svg" alt="Request" height="40" /></td>
       </tr>
       <tr>
         <td>
@@ -119,25 +121,100 @@
         </td>
       </tr>
     </table>
-    <svg width="120" height="110" xmlns="http://www.w3.org/2000/svg">
-      <path d="M 4 10 L 4 100 L 94 100 Z" stroke="black" stroke-width="10" fill="none" />
-      <path d="M 20 4 L 110 94 L 110 4 Z" stroke="black" stroke-width="10" fill="none" />
-    </svg>
-    <svg width="120" height="110" xmlns="http://www.w3.org/2000/svg">
-      <path d="M 4 10 L 4 100 L 94 100 Z" stroke="blue" stroke-width="10" fill="none" />
-      <path d="M 20 4 L 110 94 L 110 4 Z" stroke="blue" stroke-width="10" fill="none" />
-    </svg>
-    <svg width="60" height="60" xmlns="http://www.w3.org/2000/svg">
-      <rect x="5" y="5" width="50" height="50" fill="white" stroke="black" stroke-width="10" />
-      <text x="33" y="40" text-anchor="middle" font-family="sans-serif" font-size="30px" font-weight="bold" font-stretch="normal">
+    <table class="rounds">
+      <tr>
+        <td class="roundNo">1</td>
+        <td class="roundNo">2</td>
+        <td class="roundNo">3</td>
+        <td class="borderBottomed">4</td>
+      </tr>
+      <tr>
+        <td class="roundNo">5</td>
+        <td class="roundNo">6</td>
+        <td class="roundNo">7</td>
+        <td class="borderBottomed">8</td>
+      </tr>
+      <tr>
+        <td class="borderRighted">9</td>
+        <td class="borderRighted">10</td>
+        <td class="borderRighted">11</td>
+        <td>12</td>
+      </tr>
+    </table>
+    <div>
+        1
+        <img src="icons/Simple-Award-Ribbon.svg" height="15" /> =       
+        <img src="icons/1459610756_dollar-bag.svg" height="15" /> / 25
+    </div>
+    <div>
+        1
+        <img src="icons/Simple-Award-Ribbon.svg" height="15" />
+        = 
+        <img src="icons/money_dollar.svg" height="15" /> / 100
+    </div>
+    <div>
+        1
+        <img src="icons/Simple-Award-Ribbon.svg" alt="Win" height="15" />
+        = 
+        1 <img src="icons/pawn.svg" height="15" /></div>
+    <div>
+        # <img src="icons/Simple-Award-Ribbon.svg" alt="Win" height="15" />
+        = 25 -                
+        <img src="icons/mono-endturn.svg" height="15" /></div>
+    <div>
+        1
+        <img src="icons/Simple-Award-Ribbon.svg" alt="Win" height="15" />
+        =  
+        <img src="icons/mono-package-games-cards.svg" height="15" /> / 2
+    </div>
+    <div>
+        2
+        <img src="icons/Simple-Award-Ribbon.svg" alt="Win" height="15" />
+        = 1 
+        <img src="icons/leader.svg" height="15" /><img src="icons/pawn.svg" height="15" /></div>
+  </body>
+  <table xmlns="">
+    <tr>
+      <td>
+        <img src="icons\money_dollar.svg" alt="Gain" />
+      </td>
+      <td>
+        <img src="icons\mono-clock.svg" alt="Aging" />
+      </td>
+      <td>
+        <img src="icons\mono-endturn.svg" alt="Cancel" />
+      </td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>0</td>
+      <td>1</td>
+    </tr>
+    <tr class="effortCell">
+      <td class="effortCell" colspan="3">
+        <img src="icons\mono-control.svg" alt="Work" />
+        <div>5</div>
+      </td>
+    </tr>
+  </table>
+  <svg width="120" height="110" xmlns="http://www.w3.org/2000/svg">
+    <path d="M 4 10 L 4 100 L 94 100 Z" stroke="black" stroke-width="10" fill="none" />
+    <path d="M 20 4 L 110 94 L 110 4 Z" stroke="black" stroke-width="10" fill="none" />
+  </svg>
+  <svg width="120" height="110" xmlns="http://www.w3.org/2000/svg">
+    <path d="M 4 10 L 4 100 L 94 100 Z" stroke="blue" stroke-width="10" fill="none" />
+    <path d="M 20 4 L 110 94 L 110 4 Z" stroke="blue" stroke-width="10" fill="none" />
+  </svg>
+  <svg width="60" height="60" xmlns="http://www.w3.org/2000/svg">
+    <rect x="5" y="5" width="50" height="50" fill="white" stroke="black" stroke-width="10" />
+    <text x="33" y="40" text-anchor="middle" font-family="sans-serif" font-size="30px" font-weight="bold" font-stretch="normal">
                         1
                     </text>
-    </svg>
-    <svg width="60" height="60" xmlns="http://www.w3.org/2000/svg">
-      <rect x="5" y="5" width="50" height="50" fill="white" stroke="blue" stroke-width="10" />
-      <text x="33" y="40" text-anchor="middle" font-family="sans-serif" font-size="30px" font-weight="bold" font-stretch="normal">
+  </svg>
+  <svg width="60" height="60" xmlns="http://www.w3.org/2000/svg">
+    <rect x="5" y="5" width="50" height="50" fill="white" stroke="blue" stroke-width="10" />
+    <text x="33" y="40" text-anchor="middle" font-family="sans-serif" font-size="30px" font-weight="bold" font-stretch="normal">
                         3
                     </text>
-    </svg>
-  </body>
+  </svg>
 </html>

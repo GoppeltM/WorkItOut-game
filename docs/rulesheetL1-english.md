@@ -6,7 +6,8 @@
 * Cancel Cost: <img src="icons/mono-endturn.svg" alt="Cancel" height="15"/>
 * Winning points: <img src="icons/Simple-Award-Ribbon.svg" alt="Win" height="15"/>
 * Requests: <img src="icons/mono-package-games-cards.svg" alt="Request" height="15"/>
-* Player: <img src="icons/pawn.svg" alt="Hourglass" height="15"/>
+* Player: <img src="icons/pawn.svg" alt="player" height="15"/>
+* Leader: <img src="icons/leader.svg" alt="leader" height="15"/>
 
 # Preparation
 1. Collect all time units in global pot

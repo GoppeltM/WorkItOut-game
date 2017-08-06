@@ -31,5 +31,7 @@ $coopBonus = ($teamMembers - 1) * 25
 "1 point per 100 gain (10p for 1000)"
 "1 point per team member (10p for 10)"
 "25 points. -1 Point per reject (10p for 15)"
-"0.5 points per finished card (10p for 20)"
+"1 point per 2 finished card (10p for 20)"
 "2 points per team member that gained control (10p for 5)"
+
+"24 goal chips would allow a maximum of 12 players => 4*6 chip sets"
