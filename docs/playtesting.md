@@ -1,9 +1,9 @@
-This page contains notes about the playtesting sessions that were held - 
+ÔªøThis page contains notes about the playtesting sessions that were held - 
 most recent at the top.
 
 # 1.8.2017
 * red/darkred are really difficult to distinguish.
-* There is no 9 time marker, but it is confusing. Consider adding a dot: ì6.î
+* There is no 9 time marker, but it is confusing. Consider adding a dot: ‚Äú6.‚Äù
 * Stalemate cards are more dangerous than you might think. You are tied for a long time, even though much better opportunites may be available
 * Letting two team members work is more expensive than most cancellation costs, i.e. cancelling in between for a better request might be beneficial
 * keeping track of the current step and round is not easy. Supporting this would help a lot.
