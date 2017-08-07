@@ -1,10 +1,23 @@
 table {
     float: left;
     margin: 5px;
-    height: 200px;
-    width: 200px;
     border: solid;
     page-break-inside: avoid;
+}
+
+.request {
+    height: 200px;
+    width: 200px;
+}
+
+    .request img {
+        width: 30px;
+        height: 30px;
+    }
+
+.goal img {
+    width: 20px;
+    height: 20px;
 }
 
 .cheatsheet {
@@ -15,6 +28,16 @@ table {
 .rounds {
     height: 400px;
     width: 400px;
+}
+
+.leader {
+    width: 200px;
+    height: 200px;
+}
+
+.oldleader {
+    width: 80px;
+    height: 80px;
 }
 
 .borderRighted {
@@ -36,18 +59,13 @@ table {
     height: 50px;
 }
 
-img {
-    width: 30px;
-    height: 30px;
-}
-
 tr {
     height: 10px;
 }
 
-    tr.effortcell {
-        height: auto;
-    }
+tr effortcell {
+    height: auto;
+}
 
 td {
     font-size: xx-large;
@@ -56,7 +74,7 @@ td {
     font-family: "times new roman",times,serif;
 }
 
-    td.effortcell {
-        font-size: xx-large;
-        border-top: dotted;
-    }
+td effortcell {
+    font-size: xx-large;
+    border-top: dotted;
+}

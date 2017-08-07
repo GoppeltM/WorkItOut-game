@@ -10,7 +10,7 @@
     xmlns:svg="http://www.w3.org/2000/svg"
     xmlns:ns1="http://sozi.baierouge.fr"
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    id="leader"
+    id="old_leader"
     sodipodi:docname="red_star.svg"
     viewBox="0 0 1137.4 1083.2"
     version="1.1"
@@ -18,7 +18,7 @@
   >
   <sodipodi:namedview
       id="base"
-      bordercolor="#000000"
+      bordercolor="#cccccc"
       inkscape:pageshadow="2"
       inkscape:window-y="25"
       pagecolor="#ffffff"
@@ -43,7 +43,7 @@
     >
     <path
         id="path2842"
-        style="fill:#000000"
+        style="fill:#cccccc"
         d="m382.51-155.33-142.9 364.1-390.23 26.66 302.11 248.42-95.211 379.35 329.61-210.54 331.37 207.78-98.38-378.56 300.02-250.95-390.44-23.39-145.95-362.87zm0.65 228.35 86.68 215.48 231.82 13.89-178.13 149.01 58.41 224.8-196.76-123.39-195.73 125.03 56.54-225.26-179.4-147.51 231.73-15.84 84.84-216.21zm3.2323 187.18-37.613 95.824-102.7 7.023 79.515 65.381-25.065 99.85 86.773-55.42 87.214 54.715-25.917-99.644 78.986-66.057-102.79-6.1708-38.406-95.501z"
     />
   </g
