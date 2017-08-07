@@ -46,9 +46,7 @@ $players = $colors | foreach{
     $color = $_
     $playerTemplate -f $color
     $playerTemplate -f $color
-    '<svg width="120" height="110" xmlns="http://www.w3.org/2000/svg">                        
-                    <path d ="M 4 10 L 4 100 L 94 100 Z" stroke ="{0}" stroke-width="10" fill="none"/> 
-                   </svg>' -f $color
+    $playerTemplate -f $color
 }
 [xml]$node = "<html><body>" + ($players -join "") + "</body></html>"
 $node.Save("$PSCommandPath\..\..\docs\level1playermarkers.html")

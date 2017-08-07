@@ -13,6 +13,7 @@ that both may influence project success harder than customer satisfaction in cer
 * __DO__ use only one resource (Time). 
 * __DO__ keep other scenarios in mind, and design for openness. A development team is just one special team. It might be interesting to apply the same ruleset to slightly different working environments
 * Do __NOT__ use extensive texts. Not only to reduce translation effort, but to keep the concept as abstract as possible
+* __DO__ favor immediate feedback over longtime strategy
 
 # Participants
 
@@ -37,7 +38,7 @@ the working bonus (due to higher effectivity),
 but of course the leader's decision may not be in your own interest.
 
 ## Conflict of interest
-As long as anyone agree on the same goal (e.g. return of invest), it is easy to cooperate. 
+As long as all agree on the same goal (e.g. return of invest), it is easy to cooperate. 
 If anyone has completely different goals
 (e.g. one wants to gain as much as possible, the other one wants to ruin the project),
 conflicts will end up as two opposing forces that are unable to cooperate.
@@ -50,9 +51,13 @@ However, if everyone has just one goal, there is natural optimum where the syste
 If everyone has at least two goals, there are multiple optimums, which you may switch, depending on the
 current situation.
 ## Keep secret?
-Should the players know which roles they get before they are hired? Should roles be made public?
+Should the players know which goals they get before they are hired? Should goals be made public?
 For the game, it probably creates more suspense if it is up to the players to decide what they reveal.
 If they don't know before hiring, they can't be forced into telling.
+## Responsibility
+In reality, decisions may have longterm effects that are only visible after the decision maker
+has left the project. But for educational reasons, feedback about your actions should be as imminent
+as possible. This also allows other players to react on your behaviour.
 
 
 # Costs (time)
