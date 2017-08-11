@@ -3,26 +3,30 @@
     <link rel="stylesheet" href="cardstyle.css" />
     <title>Printable card set</title>
   </head>
-  <body>
+  <body xmlns:xlink="foo">
+    <svg style="display: none;">
+      <symbol id="checkBox">
+        <rect width="40" height="40" stroke="black" fill="none" />
+        <circle cx="20" cy="20" r="20" stroke="black" fill="None" />
+      </symbol>
+    </svg>
     <table class="cheatsheet">
       <tr>
         <td>
           <svg width="40" height="40">
-            <rect width="40" height="40" stroke="black" fill="none" />
-            <circle cx="20" cy="20" r="20" stroke="black" fill="None" />
+            <use xlink:href="#checkBox" />
             <text dx="12" dy="30">1</text>
           </svg>
         </td>
         <td>
-          <svg width="30" height="40">
-            <text dx="0" dy="30">1</text>
+          <svg height="60" width="180">
+            <text dx="0" dy="40">1</text>
+            <use x="20" y="0" xlink:href="icons/mono-package-games-cards.svg#mono-package-games-cards" />
+            <text dx="80" dy="40">=&gt;</text>
+            <use x="6000" y="300" xlink:href="icons/pawn.svg#pawn" transform="scale(0.02)" />
+            <text x="180" y="40">?</text>
           </svg>
-          <img src="icons/mono-package-games-cards.svg" alt="Request" height="40" />
-          <svg width="45" height="40">
-            <text dx="0" dy="30">=&gt;</text>
-          </svg>
-          <img src="icons/pawn.svg" alt="Hourglass" height="40" />?            
-            </td>
+        </td>
       </tr>
       <tr>
         <td>
