@@ -9,11 +9,18 @@ table {
     height: 200px;
     width: 200px;
 }
-
     .request img {
         width: 30px;
         height: 30px;
     }
+
+.cheatCell {
+    width: 200px;
+    height: 60px;
+    text-align: center;
+}
+
+
 
 .goal {
     margin: 5px;

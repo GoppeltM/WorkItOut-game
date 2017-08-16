@@ -10,8 +10,33 @@
         <rect width="40" height="40" stroke="black" fill="none" />
         <circle cx="20" cy="20" r="20" stroke="black" fill="None" />
       </symbol>
+      <symbol id="pawn" viewBox="0 0 60 60">
+        <use xlink:href="icons/pawn.svg#pawn" transform="scale(0.02)" />
+      </symbol>
+      <symbol id="requests">
+        <use xlink:href="icons/mono-package-games-cards.svg#mono-package-games-cards" />
+      </symbol>
+      <symbol id="cancel" viewBox="0 0 70 70">
+        <use xlink:href="icons/mono-endturn.svg#mono-endturn" />
+      </symbol>
+      <symbol id="effort" viewBox="0 0 70 70">
+        <use xlink:href="icons/mono-control.svg#mono-control" />
+      </symbol>
+      <symbol id="projectPot" viewBox="0 0 70 70">
+        <use xlink:href="icons/1459610756_dollar-bag.svg#dollar-bag" transform="scale(0.1)" />
+      </symbol>
+      <symbol id="gain" viewBox="0 0 70 70">
+        <use xlink:href="icons/money_dollar.svg#money_dollar" transform="scale(0.37)" />
+      </symbol>
     </svg>
     <table class="cheatsheet">
+      <tr>
+        <td>
+          <svg height="30" width="60">
+            <use x="0" xlink:href="#pawn" />
+          </svg>
+        </td>
+      </tr>
       <tr>
         <td>
           <svg width="40" height="40">
@@ -20,12 +45,12 @@
           </svg>
         </td>
         <td>
-          <svg height="60" width="180">
+          <svg class="cheatCell">
             <text dx="0" dy="40">1</text>
-            <use x="20" y="0" xlink:href="icons/mono-package-games-cards.svg#mono-package-games-cards" />
+            <use x="20" y="0" xlink:href="#requests" />
             <text dx="80" dy="40">=&gt;</text>
-            <use x="6000" y="300" xlink:href="icons/pawn.svg#pawn" transform="scale(0.02)" />
-            <text x="180" y="40">?</text>
+            <use x="60" y="5" xlink:href="#pawn" />
+            <text dx="170" dy="40">?</text>
           </svg>
         </td>
       </tr>
@@ -38,9 +63,9 @@
           </svg>
         </td>
         <td>
-          <img src="icons/mono-endturn.svg" alt="Cancel" height="40" />
-          <svg width="30" height="40">
-            <text dx="0" dy="30">?</text>
+          <svg class="cheatCell">
+            <use x="-20" y="0" xlink:href="#cancel" />
+            <text dx="100" dy="35">?</text>
           </svg>
         </td>
       </tr>
@@ -53,11 +78,11 @@
           </svg>
         </td>
         <td>
-          <img src="icons/pawn.svg" alt="Hourglass" height="40" />
-          <svg width="50" height="40">
-            <text dx="0" dy="30">=&gt;</text>
+          <svg class="cheatCell">
+            <use x="-40" y="0" xlink:href="#pawn" />
+            <text dx="70" dy="30">=&gt;</text>
+            <use x="40" y="0" xlink:href="#effort" />
           </svg>
-          <img src="icons/mono-control.svg" alt="Effort" height="40" />
         </td>
       </tr>
       <tr>
@@ -69,13 +94,11 @@
           </svg>
         </td>
         <td>
-          <img src="icons/pawn.svg" alt="Hourglass" height="40" />
-          <svg width="30" height="40">
-            <text dx="0" dy="30">*</text>
-          </svg>
-          <img src="icons/pawn.svg" alt="Hourglass" height="40" />
-          <svg width="20" height="40">
-            <text dx="0" dy="30">?</text>
+          <svg class="cheatCell">
+            <use x="-40" y="0" xlink:href="#pawn" />
+            <text dx="70" dy="30">*</text>
+            <use x="30" y="0" xlink:href="#pawn" />
+            <text dx="150" dy="30">?</text>
           </svg>
         </td>
       </tr>
@@ -88,9 +111,9 @@
           </svg>
         </td>
         <td>
-          <img src="icons/mono-control.svg" alt="Effort" height="40" />
-          <svg width="20" height="40">
-            <text dx="0" dy="30">--</text>
+          <svg class="cheatCell">
+            <use x="-30" y="0" xlink:href="#effort" />
+            <text dx="100" dy="30">--</text>
           </svg>
         </td>
       </tr>
@@ -103,11 +126,11 @@
           </svg>
         </td>
         <td>
-          <img src="icons/1459610756_dollar-bag.svg" alt="Hourglass" height="40" />
-          <svg width="20" height="40">
-            <text dx="0" dy="30">+=</text>
+          <svg class="cheatCell">
+            <use x="-40" y="0" xlink:href="#projectPot" />
+            <text dx="70" dy="30">+=</text>
+            <use x="40" y="0" xlink:href="#gain" />
           </svg>
-          <img src="icons/money_dollar.svg" alt="Request" height="40" />
         </td>
       </tr>
       <tr>
@@ -119,7 +142,9 @@
           </svg>
         </td>
         <td>
-          <img src="icons/mono-clock.svg" alt="Aging cost" height="40" />
+          <svg class="cheatCell" viewBox="0 0 70 70">
+            <use x="0" y="0" xlink:href="icons/mono-clock.svg#mono-clock" transform="scale(0.9)" />
+          </svg>
         </td>
       </tr>
       <tr>
@@ -131,11 +156,11 @@
           </svg>
         </td>
         <td>
-          <img src="icons/1459610756_dollar-bag.svg" alt="Hourglass" height="40" />
-          <svg width="20" height="40">
-            <text dx="0" dy="30">-=</text>
+          <svg class="cheatCell">
+            <use x="-40" xlink:href="#projectPot" />
+            <text dx="70" dy="30">-=</text>
+            <use x="40" xlink:href="#pawn" />
           </svg>
-          <img src="icons/pawn.svg" alt="Hourglass" height="40" />
         </td>
       </tr>
       <tr>
@@ -147,9 +172,9 @@
           </svg>
         </td>
         <td>
-          <img src="icons/pawn.svg" alt="Hourglass" height="40" />
-          <svg width="20" height="40">
-            <text dx="0" dy="30">++?</text>
+          <svg class="cheatCell">
+            <use x="-40" xlink:href="#pawn" />
+            <text dx="80" dy="30">++?</text>
           </svg>
         </td>
       </tr>
@@ -162,8 +187,10 @@
           </svg>
         </td>
         <td>
-          <img src="icons/mono-package-games-cards.svg" alt="Request" height="40" />
-          <img src="icons/mono-package-games-cards.svg" alt="Request" height="40" />
+          <svg class="cheatCell">
+            <use x="20" xlink:href="#requests" />
+            <use x="80" xlink:href="#requests" />
+          </svg>
         </td>
       </tr>
     </table>
