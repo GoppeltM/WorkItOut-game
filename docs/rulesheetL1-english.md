@@ -13,8 +13,9 @@
 1. Collect all time units in global pot
 1. Set 50 time units as project pot
 1. Give the first player his 5 work chips
-4. Prepare request stack
-1. Start the first round
+1. Prepare request stack
+1. Put two coins (or similar) on round marker and step marker. 
+  Move each of them forward while progressing
 
 # Goal
 Earn as many project pot time units after 25 rounds as possible.
@@ -23,8 +24,8 @@ Put yourself into the highscore list
 # Round
 
 1. __Take max. one request stack__  
-Lay out all cards in front of you, face up.  
-For each fill the effort stack from the global pot
+Lay out all cards from the chosen stack in front of you, face up.  
+For each card fill the effort stack from the global pot
 1. __Reject requests__  
 Remove any requests you like, and pay cancellation cost from project pot
 1. __Assign work__  
