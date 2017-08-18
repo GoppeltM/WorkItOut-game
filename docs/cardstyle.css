@@ -9,6 +9,7 @@ table {
     height: 200px;
     width: 200px;
 }
+
     .request img {
         width: 30px;
         height: 30px;
@@ -28,8 +29,26 @@ table {
     border: solid;
     width: 160px;
     height: 50px;
-    font-size:large;    
+    text-align: center;
+    position: relative;
 }
+
+    .goal > .centered {
+        position: absolute;
+        top: 50%;
+        height: 30px;
+        margin-top: -15px;
+        width: 160px;
+    }
+
+    .goal text {
+        font-size: x-large;
+    }
+
+    .goal svg{
+        width: 160px;
+        height: 40px;
+    }
 
     .goal img {
         width: 30px;

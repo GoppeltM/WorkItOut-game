@@ -30,6 +30,9 @@
         <symbol id="leader" viewBox="0 0 70 70">
             <use xlink:href="icons/leader.svg#leader" transform="scale(0.05)" />
         </symbol>
+        <symbol id="winningPoint" viewBox="0 0 70 70">
+            <use xlink:href="icons/Simple-Award-Ribbon.svg#Simple-Award-Ribbon" transform="scale(0.03)" />            
+        </symbol>
     </svg>
     <table class="cheatsheet">
         <tr>
@@ -406,11 +409,15 @@
     <img class="oldleader" src="icons/old_leader.svg" width="50" height="50" />
     <img class="oldleader" src="icons/old_leader.svg" width="50" height="50" />
     <div class="goal">
-        1
-        <img src="icons/Simple-Award-Ribbon.svg" />
-        =       
-        <img src="icons/1459610756_dollar-bag.svg"/>
-        &#0247; 25
+        <div class="centered">
+            <svg>
+                <text dx="10" dy="20">1</text>
+                <use x="-30" xlink:href="#winningPoint" />
+                <text dx="55" dy="20">=</text>
+                <use x="10" xlink:href="#projectPot" />
+                <text dx="100" dy="20">&#0247; 25</text>
+            </svg>       
+        </div>        
     </div>
     <div class="goal">
         1
