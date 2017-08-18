@@ -3,9 +3,7 @@ $ErrorActionPreference = 'Stop'
 Add-Type -AssemblyName 'System.Xml.Linq'
 
 function New-HtmlCards{
-	param($stamp, $deck)
-	[xml]$harness = Get-Content -Path $PSCommandPath\..\harness.html
-	$body = $harness.ChildNodes[0].ChildNodes[1]
+	param($stamp, $deck)	
 	$deck | foreach {
 		$card = $_
 		$copy = $stamp.Clone()
@@ -16,16 +14,19 @@ function New-HtmlCards{
 		$copy.tr.td.div | where {$_.id -eq "effort"} | foreach{$_.'#text' = $card.effort.ToString()}
 		$copy.tr.td | where {$_.id -ne $null} | foreach{$_.RemoveAttribute('id')}
         $copy.tr.td.div | where {$_.id -ne $null} | foreach{$_.RemoveAttribute('id')}
-
-		$imported = $harness.ImportNode($copy, $true)
-		$body.AppendChild($imported) | Out-Null
-	}
-	$harness
+        $copy
+	}	
 }
 # request cards
 [xml]$template = Get-Content -Path $PSCommandPath\..\cardTemplate-icon.html
+[xml]$harness = Get-Content -Path $PSCommandPath\..\harness.html
+$body = $harness.ChildNodes[0].ChildNodes[1]
 $requestCards = New-HtmlCards -stamp $template.table -deck $deck
-$requestCards.Save("$PSCommandPath\..\..\docs\requestcards.html")
+$requestCards | foreach{
+		$imported = $harness.ImportNode($_, $true)
+		$body.AppendChild($imported) | Out-Null
+}
+$harness.Save("$PSCommandPath\..\..\docs\requestcards.html")
 
 $colors = "black", "red", "blue", "green", "yellow", "cyan", "purple", "orange", "lightgrey"
 $playerTemplate = '<svg width="120" height="110" xmlns="http://www.w3.org/2000/svg">                        
@@ -67,7 +68,7 @@ $node.Save("$PSCommandPath\..\..\docs\timemarkers.html")
 
 # sample
 [System.Xml.Linq.XDocument]$sample = [System.Xml.Linq.XDocument]::Load("$PSCommandPath\..\harness.html")
-$sample.Root[0].Add([System.Xml.Linq.XElement]::Parse($requestCards.html.body.table[2].OuterXml))
+$sample.Root[0].Add([System.Xml.Linq.XElement]::Parse($requestCards[6].OuterXml))
 $sample.Root[0].Add([System.Xml.Linq.XElement]::Parse($players[0]))
 $sample.Root[0].Add([System.Xml.Linq.XElement]::Parse($players[6]))
 $sample.Root[0].Add([System.Xml.Linq.XElement]::Parse($times[0]))
