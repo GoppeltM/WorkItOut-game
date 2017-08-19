@@ -28,6 +28,8 @@ $requestCards | foreach{
 }
 $harness.Save("$PSCommandPath\..\..\docs\requestcards.html")
 
+$doc = [System.Xml.Linq.XDocument]::Load("$PSCommandPath\..\..\docs\requestcards.html")
+$body = $doc.Root.Elements() | select -Skip 1 -First 1
 $colors = "black", "red", "blue", "green", "yellow", "cyan", "purple", "orange", "lightgrey"
 $playerTemplate = '<svg width="120" height="110" xmlns="http://www.w3.org/2000/svg">                        
                     <path d ="M 4 10 L 4 100 L 94 100 Z" stroke ="{0}" stroke-width="10" fill="none"/> 
@@ -45,12 +47,13 @@ $timeTemplate = '<svg width="60" height="60" xmlns="http://www.w3.org/2000/svg">
 # player markers
 $players = $colors | foreach{
     $color = $_
-    $playerTemplate -f $color
-    $playerTemplate -f $color
-    $playerTemplate -f $color
+    for($i = 0; $i -lt 3;$i++){
+        [System.Xml.Linq.XElement]::Parse($playerTemplate -f $color)
+    }    
 }
-[xml]$node = "<html><body>" + ($players -join "") + "</body></html>"
-$node.Save("$PSCommandPath\..\..\docs\level1playermarkers.html")
+$players | foreach {
+    $body.Add($_)
+}
 
 $currColors = $colors.GetEnumerator()
 # Time markers
@@ -59,12 +62,14 @@ $times = "1", "2", "3", "6.", "12", "24", "48", "96" | foreach{
     $currColors.MoveNext() | Out-Null
     $color = $currColors.Current
     for($i = 0;$i -lt 18;$i++){
-        $timeTemplate -f $color, $value
+        [System.Xml.Linq.XElement]::Parse(($timeTemplate -f $color, $value))
     }    
 }
 
-[xml]$node = "<html><body>" + ($times -join "") + "</body></html>"
-$node.Save("$PSCommandPath\..\..\docs\timemarkers.html")
+$times | foreach {
+    $body.Add($_)
+}
+$doc.Save("$PSCommandPath\..\..\docs\requestcards.html")
 
 # sample
 [System.Xml.Linq.XDocument]$sample = [System.Xml.Linq.XDocument]::Load("$PSCommandPath\..\harness.html")
