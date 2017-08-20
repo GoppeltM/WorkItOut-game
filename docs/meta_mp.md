@@ -36,7 +36,12 @@ If they don't know before hiring, they can't be forced into telling.
 In reality, decisions may have longterm effects that are only visible after the decision maker
 has left the project. But for educational reasons, feedback about your actions should be as imminent
 as possible. This also allows other players to react on your behaviour.
-
+## Initiative
+Who makes the first step? Moving first requires you to make your plans public, 
+and allows anyone else to counter it. On the other hand, moving first also allows to send a message.
+Therefore, I recommend that the leader always draws last while voting and while distributing work.
+It gives him an advantage in countering badly distributed work, 
+but it also makes it more visible what other players would have considered as the right choice.
 
 # Goal types
 What are typical goals a worker might have? 
@@ -46,15 +51,20 @@ What are typical goals a worker might have?
 * satisfy curiosity
 * have fun
 
-He might have these goals for himself, but also for others. 
+He might have these goals for himself, but also for others.
+If he knows the goal of someone else, he might decide to counter it.
 For example, due to ethical reasons, someone might be interested in reducing unemployment,
 and in increasing salary for everyone. To meet these goals, you could follow multiple strategies, for example:
-1. project should have a big project time pot (money if you are shareholder)
-1. project should collect a lot of gain (career, if big projects recommend you for other tasks)
-1. project should have many team members (social safety because small projects are more likely to get cancelled)
-1. project should have few rejected requests (career, if rejecting requests may hurt your customer or big boss reputation)
-1. project should have a lot of finished requests (curiosity/career, if you are able to learn more from each new task than from one big one)
-1. control should be handed to as many team members as possible (career/social safety. You believe that work becomes more efficient that way)
+1. __project should have a big project time pot__ (money if you are shareholder)  
+1. __project should collect a lot of gain__ (career, if big projects recommend you for other tasks)  
+1. __project should have many team members__ (social safety because small projects are more likely to get cancelled)
+1. __project should have few rejected requests__ (career, if rejecting requests may hurt your customer or big boss reputation)
+1. __project should have a lot of finished requests__ (curiosity/career, if you are able to learn more from each new task than from one big one)
+1. __control should be handed to as many team members as possible__ (career/social safety. You believe that work becomes more efficient that way)
+
+All these goals can be countered by work strike, and by accepting bad requests, but since they will hurt all goals,
+you will always hurt yourself too. By distributing your work, you can pressure the leader
+into following your tasks to finish them.
 
 This means we have 5+4+3+2+1=15 possible goal pairs, 
 i.e. each team member is likely to have a unique goal combo.
@@ -86,4 +96,3 @@ as long as they are getting finished, so A can score points with fewer rejects.
 
 This means that most goals actually do NOT favor efficiency, but all of them require a positive project pot,
 i.e. that the project keeps running.
-

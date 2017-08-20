@@ -66,3 +66,9 @@ Possible goals:
 
 ## Multitasking costs
 Splitting between multiple requests should get special penalties
+
+# Reverse gamemode (King of the hill)
+Hiring is impossible. Instead of building up your team, you could start with a full team, 
+and eliminate one after another after five rounds. 
+Elimination is created through simple majority vote. 
+This guarantees that all players are at least involved part of the time.

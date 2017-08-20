@@ -36,10 +36,10 @@ $playerTemplate = '<svg width="120" height="110" xmlns="http://www.w3.org/2000/s
                     <path d ="M 20 4 L 110 94 L 110 4 Z" stroke ="{0}" stroke-width="10" fill="none"/> 
                    </svg>'
 
-$timeTemplate = '<svg width="60" height="60" xmlns="http://www.w3.org/2000/svg"> 
-                    <rect x="5" y="5" width="50" height="50" fill="white" stroke="{0}" stroke-width="10" />                    
-                    <text x="33" y="40" text-anchor="middle" font-family="sans-serif" 
-                        font-size="30px" font-weight="bold" font-stretch="normal">
+$timeTemplate = '<svg width="90" height="90" xmlns="http://www.w3.org/2000/svg" transform="scale(2)"> 
+                    <rect x="5" y="5" width="80" height="80" fill="white" stroke="{0}" stroke-width="10" />                    
+                    <text x="50" y="60" text-anchor="middle" font-family="sans-serif" 
+                        font-size="50px" font-weight="bold" font-stretch="normal">
                         {1}
                     </text> 
         </svg>'

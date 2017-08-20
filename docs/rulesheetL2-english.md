@@ -9,7 +9,7 @@ After 25 rounds, each player counts their points from both goals, and adds them.
 The player with the most points wins.
 
 ## Step 1: Delegating
-Every player, clockwise, starting by the leader, 
+Every player, starting with the player left to the leader, clockwise,
 may opt to delegate all his work chips for this round to any other player
 that still has his own work chips.
 For doing so, a sixth work chip is added to the pool until next round.
@@ -25,6 +25,8 @@ He may decide any remaining steps until next delegation, except...
 
 ## Step 5: Assigning work
 Whoever still has work chips, still assigns 0-max of his own chips to work.
+Work is assigned starting with the player left to the leader, 
+clockwise, ending with the leader
 
 ## Step 11: Hiring
 Any team member that is hired gets two random goals.
