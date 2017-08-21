@@ -95,4 +95,28 @@ Player A sees how the project pot is shrinking. He suggests to B that accepting 
 as long as they are getting finished, so A can score points with fewer rejects.
 
 This means that most goals actually do NOT favor efficiency, but all of them require a positive project pot,
-i.e. that the project keeps running.
+i.e. that the project keeps running with a balanced project pot.
+
+## counter tactics
+Assuming that everyone knows the goals of each other:
+
+__big project pot__
+Hire team members, accept multiple requests at once
+__a lot of gain__
+accept many small requests, stop hiring, reject efficient requests
+__many team members__
+Stop hiring, reject requests
+__few rejects__
+Stop hiring, accept multiple requests at once
+__many finished__
+Stop hiring, accept big requests
+__many leaders__
+Stop hiring, find stable consensus for leader
+
+This suggests that most tactics will be hurt by growing teams. 
+On the other hand, growing teams may fortify your own position.
+Accepting multiple requests and rejecting unwanted requests will 
+probably also be a popular strategy - bringing down efficiency,
+and which are ultimately limited by bankruptcy.
+Altogether, big project pot and few rejects will only flourish
+in a stable, well-controlled environment.

@@ -29,7 +29,9 @@ Work is assigned starting with the player left to the leader,
 clockwise, ending with the leader
 
 ## Step 11: Hiring
-Any team member that is hired gets two random goals.
+Any team member that is hired draws 
+two random goals from a set of all 6. 
+Each player should be aware what kind of goals there are.
 Any team member HAS to be represented by a player.
 
 
