@@ -31,9 +31,18 @@ $harness.Save("$PSCommandPath\..\..\docs\requestcards.html")
 $doc = [System.Xml.Linq.XDocument]::Load("$PSCommandPath\..\..\docs\requestcards.html")
 $body = $doc.Root.Elements() | select -Skip 1 -First 1
 $colors = "black", "red", "blue", "green", "yellow", "cyan", "purple", "orange", "lightgrey"
+$playerNames = ("A", "B", "C", "D", "E", "F", "G", "H", "I", "J").GetEnumerator()
 $playerTemplate = '<svg width="120" height="110" xmlns="http://www.w3.org/2000/svg">                        
-                    <path d ="M 4 10 L 4 100 L 94 100 Z" stroke ="{0}" stroke-width="10" fill="none"/> 
-                    <path d ="M 20 4 L 110 94 L 110 4 Z" stroke ="{0}" stroke-width="10" fill="none"/> 
+    <path d="M 4 10 L 4 100 L 94 100 Z" stroke="{0}" stroke-width="10" fill="none" />
+    <text x="10" y="90" text-anchor="start" font-family="sans-serif" 
+                        font-size="50px" font-weight="bold" font-stretch="normal">
+                        {1}
+                    </text>
+    <path d="M 4 10 L 4 100 L 94 100 Z" stroke="{0}" stroke-width="10" fill="none" transform="rotate(180, 55,50)" />
+    <text x="10" y="90" text-anchor="start" font-family="sans-serif" 
+                        font-size="50px" font-weight="bold" font-stretch="normal" transform="rotate(180, 55,50)">
+                        {1}
+                    </text>
                    </svg>'
 
 $timeTemplate = '<svg width="90" height="90" xmlns="http://www.w3.org/2000/svg" transform="scale(2)"> 
@@ -46,9 +55,11 @@ $timeTemplate = '<svg width="90" height="90" xmlns="http://www.w3.org/2000/svg" 
 
 # player markers
 $players = $colors | foreach{
+    $playerNames.MoveNext() | Out-Null
     $color = $_
+    $baked = $playerTemplate -f $color, $playerNames.Current
     for($i = 0; $i -lt 3;$i++){
-        [System.Xml.Linq.XElement]::Parse($playerTemplate -f $color)
+        [System.Xml.Linq.XElement]::Parse($baked)
     }    
 }
 $players | foreach {
@@ -74,8 +85,8 @@ $doc.Save("$PSCommandPath\..\..\docs\requestcards.html")
 # sample
 [System.Xml.Linq.XDocument]$sample = [System.Xml.Linq.XDocument]::Load("$PSCommandPath\..\harness.html")
 $sample.Root[0].Add([System.Xml.Linq.XElement]::Parse($requestCards[6].OuterXml))
-$sample.Root[0].Add([System.Xml.Linq.XElement]::Parse($players[0]))
-$sample.Root[0].Add([System.Xml.Linq.XElement]::Parse($players[6]))
-$sample.Root[0].Add([System.Xml.Linq.XElement]::Parse($times[0]))
-$sample.Root[0].Add([System.Xml.Linq.XElement]::Parse($times[50]))
+$sample.Root[0].Add($players[0])
+$sample.Root[0].Add($players[6])
+$sample.Root[0].Add($times[0])
+$sample.Root[0].Add($times[50])
 $sample.Save("$PSCommandPath\..\..\docs\sample.html")

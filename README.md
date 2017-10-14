@@ -19,7 +19,7 @@ where we wondered why so many software projects (and other projects) fail,
 even in seemingly healthy environments. 
 
 Obviously, there are many possible answers, but this game focusses on two thesises:
-1. Planning involves subtle aspects that defy human intuiton
+1. Planning involves subtle aspects that defy human intuition
 2. The common assumption that it is in the best interest of every team member
   if the project is a big success, is wrong. 
 
