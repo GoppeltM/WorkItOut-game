@@ -16,4 +16,4 @@ Play around with format and border size to get optimal results
 * [Singleplayer rules (english)](rulesheetL1-english.md)
 * [Multiplayer rules (english)](rulesheetL2-english.md)
 
-For more details, see [Youtube playlist here](https://www.youtube.com/playlist?list=PLDoi0zvQ3uRyr-8Ixtw5mL6-2N3qAC8Kz) (english only)
+For more details, see [Youtube playlist here](https://www.youtube.com/playlist?list=PLDoi0zvQ3uRyr-8Ixtw5mL6-2N3qAC8Kz) (german only)
